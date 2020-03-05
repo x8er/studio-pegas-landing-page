@@ -19,7 +19,42 @@ body {
   align-items: center;
 }
 
+// responsive dropper
+.drop-container {
+  position: relative;
+
+  .dropper {
+    position: absolute;
+    visibility: hidden;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    padding: 12px;
+    width: 208px;
+    opacity: 0;
+    transition: visibility 0s linear 0.2s, opacity 0.2s ease;
+    background-color: #075057;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.22);
+
+    &__element {
+      font-size: 1rem;
+      line-height: 1.6rem;
+    }
+  }
+
+  &:hover {
+    .dropper {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+    }
+  }
+}
+
+// Main side of styles
 header {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 20px 80px;
@@ -32,7 +67,15 @@ header {
   background-position: center;
   background-size: cover;
 
+  #burger-btn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
   .nav {
+    user-select: none;
     display: flex;
     align-items: center;
 
@@ -41,6 +84,7 @@ header {
     }
 
     .item {
+      position: relative;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -52,6 +96,13 @@ header {
 
       img {
         margin: 0 0 0 4px;
+        transition: transform .2s ease;
+      }
+    }
+
+    .drop-container:hover {
+      img {
+        transform: rotate(-180deg);
       }
     }
 
@@ -64,6 +115,7 @@ header {
   }
 
   .title {
+    user-select: none;
     display: flex;
     margin: auto 0 auto 13%;
 
@@ -81,6 +133,18 @@ header {
       flex-direction: column;
       margin-top: 11.5vw;
     }
+
+    &_m {
+      display: none;
+      font-family: Poppins;
+      font-size: 9.86vh;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      margin: auto 0;
+      color: white;
+      width: max-content;
+      text-align: center;
+    }
   }
 
   .sub {
@@ -93,5 +157,63 @@ header {
     padding: 0 0 5px 20%;
     margin-bottom: 40px;
     border-bottom: 2px solid white;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 5%;
+    background-position: 80% 50%;
+
+    .sub {
+      width: 80%;
+      padding-left: 0;
+      align-self: flex-end;
+      border-bottom: 1px solid white;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    #burger-btn {
+      display: block;
+    }
+
+    .nav {
+      display: none;
+    }
+
+    .sub {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+  header {
+    .title {
+      display: none;
+
+      &_m {
+        display: block;
+      }
+    }
+
+    .sub {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  header {
+    background-position: 65% 50%;
+
+    .sub {
+      width: 70%;
+      font-size: 0.8rem;
+    }
   }
 }

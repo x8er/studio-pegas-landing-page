@@ -11,13 +11,25 @@
 
 <body>
   <header>
+    <img src="icons/menu.svg" id="burger-btn">
     <div class="nav">
       <div class="line"></div>
       <img src="icons/logo.png" class="logo">
       <div class="line"></div>
       <div class="item">о нас</div>
       <div class="line"></div>
-      <div class="item">услуги<img src="icons/arrow.svg"></div>
+      <div class="item drop-container">
+        услуги
+        <img src="icons/arrow.svg">
+        <div class="dropper">
+          <div class="dropper__element">парикмахерские услуги</div>
+          <div class="dropper__element">брови и ресницы</div>
+          <div class="dropper__element">перманентный макияж</div>
+          <div class="dropper__element">макияж</div>
+          <div class="dropper__element">тату</div>
+          <div class="dropper__element">обучение</div>
+        </div>
+      </div>
       <div class="line"></div>
       <div class="item">галерея</div>
       <div class="line"></div>
@@ -30,9 +42,10 @@
       </div>
       <div class="title-gas">
         <div class="letters">G</div>
-        <div class="letters" style="margin-left: 15px">AS</div>
+        <div class="letters" style="margin-left: 1vw">AS</div>
       </div>
     </div>
+    <div class="title_m">PEGAS</div>
     <div class="sub">профессиональное пространство</div>
   </header>
   <script src="js/script.js"></script>
