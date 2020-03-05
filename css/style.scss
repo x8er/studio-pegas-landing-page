@@ -1,6 +1,16 @@
+@font-face {
+  src: url("/fonts/FuturaPT/FuturaPT-Light.ttf");
+  font-family: FuturaPT;
+  font-weight: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
+}
+
+html {
+  font-size: 14px;
 }
 
 body {
@@ -10,10 +20,78 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 80px;
+  box-sizing: border-box;
   max-width: 1920px;
   width: 100%;
   height: 100vh;
   background-image: url("/img/header-bg.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+
+  .nav {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin: 0 30px;
+    }
+
+    .item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-family: FuturaPT;
+      font-size: 1.14rem;
+      text-transform: uppercase;
+      color: white;
+      margin: 15px 14px 0 14px;
+
+      img {
+        margin: 0 0 0 4px;
+      }
+    }
+
+    .line {
+      flex-grow: 1;
+      height: 2px;
+      margin-top: 15px;
+      background-color: white;
+    }
+  }
+
+  .title {
+    display: flex;
+    margin: auto 0 auto 13%;
+
+    .letters {
+      font-family: Poppins;
+      font-size: 11.5vw;
+      line-height: 12vw;
+      letter-spacing: 2.605vw;
+      color: white;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &-gas {
+      display: flex;
+      flex-direction: column;
+      margin-top: 11.5vw;
+    }
+  }
+
+  .sub {
+    font-family: FuturaPT;
+    font-size: 2.14rem;
+    text-transform: uppercase;
+    color: white;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0 5px 20%;
+    margin-bottom: 40px;
+    border-bottom: 2px solid white;
+  }
 }
