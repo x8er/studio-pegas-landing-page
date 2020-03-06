@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pegas Beauty Studio</title>
+  <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Poppins:300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header>
-    <img src="icons/menu.svg" id="burger-btn">
+    <!-- Mobile pos logo and burgerBtn -->
+    <img src="icons/logo.png" class="logo_m">
+    <img src="icons/menu.svg" id="burgerBtn">
     <div class="nav">
       <div class="line"></div>
       <img src="icons/logo.png" class="logo">
@@ -47,7 +50,25 @@
     </div>
     <div class="title_m">PEGAS</div>
     <div class="sub">профессиональное пространство</div>
+    <!-- Mobile navigation -->
+    <div class="nav_m">
+      <img src="icons/close.svg">
+      <div class="item">о нас</div>
+      <div class="item">услуги</div>
+      <div class="services">
+        <div class="services__item">Парикмахерские услуги</div>
+        <div class="services__item">Брови и ресницы</div>
+        <div class="services__item">Перманентный макияж</div>
+        <div class="services__item">Макияж</div>
+        <div class="services__item">Тату</div>
+        <div class="services__item">Обучение</div>
+      </div>
+      <div class="item">галерея</div>
+      <div class="item">отзывы</div>
+      <div class="item">контакты</div>
+    </div>
   </header>
+  <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 
