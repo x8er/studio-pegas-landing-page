@@ -19,17 +19,17 @@
       <div class="line"></div>
       <img src="icons/logo.png" class="logo">
       <div class="line"></div>
-      <div class="item">о нас</div>
+      <div class="item goToAboutUs">о нас</div>
       <div class="line"></div>
       <div class="item drop-container">
         услуги
         <img src="icons/arrow.svg">
         <div class="dropper">
-          <div class="dropper__element">парикмахерские услуги</div>
-          <div class="dropper__element">брови и ресницы</div>
-          <div class="dropper__element">перманентный макияж</div>
-          <div class="dropper__element">макияж</div>
-          <div class="dropper__element">тату</div>
+          <div class="dropper__element goToBarber">парикмахерские услуги</div>
+          <div class="dropper__element goToEyebrow">брови и ресницы</div>
+          <div class="dropper__element goToPerMakeup">перманентный макияж</div>
+          <div class="dropper__element goToMakeup">макияж</div>
+          <div class="dropper__element goToTattoo">тату</div>
           <div class="dropper__element">обучение</div>
         </div>
       </div>
@@ -53,14 +53,14 @@
     <!-- Mobile navigation -->
     <div class="nav_m">
       <img src="icons/close.svg">
-      <div class="item">о нас</div>
-      <div class="item">услуги</div>
+      <div class="item goToAboutUs">о нас</div>
+      <div class="item goToBarber">услуги</div>
       <div class="services">
-        <div class="services__item">Парикмахерские услуги</div>
-        <div class="services__item">Брови и ресницы</div>
-        <div class="services__item">Перманентный макияж</div>
-        <div class="services__item">Макияж</div>
-        <div class="services__item">Тату</div>
+        <div class="services__item goToBarber">Парикмахерские услуги</div>
+        <div class="services__item goToEyebrow">Брови и ресницы</div>
+        <div class="services__item goToPerMakeup">Перманентный макияж</div>
+        <div class="services__item goToMakeup">Макияж</div>
+        <div class="services__item goToTattoo">Тату</div>
         <div class="services__item">Обучение</div>
       </div>
       <div class="item">галерея</div>
@@ -68,6 +68,139 @@
       <div class="item">контакты</div>
     </div>
   </header>
+  <div class="about-us-container">
+    <div class="title">Мы — команда профессионалов</div>
+    <div class="info">Знаем свое дело и готовы найти решение для любого клиента. Наши специалисты аккуратны, усидчивы и
+      внимательны. Мы знаем все модные тенденции и создадим для вас образ, который будет вас дополнять.
+    </div>
+    <div class="blocks">
+      <div class="block">
+        <img src="icons/masters.png">
+        <div class="text">Все мастера самой высокой категории. Постоянно развиваются в своих направлениях</div>
+      </div>
+      <div class="block filled">
+        <img src="icons/clock.png">
+        <div class="text">У нас ценят высокий сервис, стерильность и комфортные условия</div>
+      </div>
+      <div class="block">
+        <img src="icons/trust.png">
+        <div class="text">Внимательно относимся к каждому, умеем слышать, выполняем работу любой сложности</div>
+      </div>
+      <div class="block filled">
+        <img src="icons/price.png">
+        <div class="text">Доступная стоимость и всегда самые лучшие предложения для клиентов</div>
+      </div>
+    </div>
+  </div>
+  <div class="services-container">
+    <div class="row">
+      <div class="service hereBarber" style="background-color: #E1D4D0;">
+        <div class="service__title">
+          <span>Парикмахерские услуги</span>
+          <img src="icons/arrow-dark.svg">
+        </div>
+        <div class="service__detail">
+          <div>Стрижка</div>
+          <div>женская / детская / мужская</div>
+          <img src="icons/cube.svg">
+        </div>
+        <div class="service__detail">
+          <div>Окрашивание волос</div>
+          <div>однотонное / креативное</div>
+          <img src="icons/cube.svg">
+        </div>
+        <div class="service__detail">
+          <div>Укладка волос</div>
+          <div>повседневная / торжественная</div>
+          <img src="icons/cube.svg">
+        </div>
+        <div class="service__detail">
+          <div>Прически</div>
+          <div>повседневные / вечерние / свадебные</div>
+          <img src="icons/cube.svg">
+        </div>
+        <div class="service__detail">
+          <div>Восстановление волос</div>
+        </div>
+      </div>
+      <img class="fix" src="img/service-1.png">
+    </div>
+    <div class="row fix">
+      <img src="img/service-2.png">
+      <div class="service hereEyebrow" style="background-color: #C8D8D7;">
+        <div class="service__title">
+          <span>Брови и ресницы</span>
+          <img src="icons/arrow-dark.svg">
+        </div>
+        <div class="service__detail">
+          <div>Оформление бровей</div>
+          <div>моделирование / окрашивание</div>
+          <img src="icons/cube.svg">
+        </div>
+        <div class="service__detail">
+          <div>Окрашивание ресниц</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="service herePerMakeup" style="background-color: #ECECEC;">
+        <div class="service__title">
+          <span>Перманентный макияж</span>
+          <img src="icons/arrow-dark.svg">
+        </div>
+        <div class="service__detail">
+          <div>Брови</div>
+          <img src="icons/cube.svg">
+        </div>
+        <div class="service__detail">
+          <div>Губы</div>
+          <img src="icons/cube.svg">
+        </div>
+        <div class="service__detail">
+          <div>Веки</div>
+          <img src="icons/cube.svg">
+        </div>
+        <div class="service__detail">
+          <div>Удаление татуажа на лице</div>
+        </div>
+      </div>
+      <img class="fix" src="img/service-3.png">
+    </div>
+    <div class="row fix">
+      <img src="img/service-4.png">
+      <div class="service hereMakeup" style="background-color: #BBBBC9;">
+        <div class="service__title">
+          <span>Макияж</span>
+          <img src="icons/arrow-dark.svg">
+        </div>
+        <div class="service__detail">
+          <div>Вечерний</div>
+          <img src="icons/cube.svg">
+        </div>
+        <div class="service__detail">
+          <div>Офисный (деловой)</div>
+          <img src="icons/cube.svg">
+        </div>
+        <div class="service__detail">
+          <div>Свадебный</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="service hereTattoo" style="background-color: #393939; color: white;">
+        <div class="service__title">
+          <span>Тату</span>
+          <img style="height: 12px;" src="icons/arrow.svg">
+        </div>
+        <div class="service__detail">
+          <div>Тату на теле — любого размера</div>
+          <div>Создание экскиза / нанесение татуировки / <span style="white-space: nowrap;">рекомендации по уходу</span>
+          </div>
+        </div>
+      </div>
+      <img class="fix" src="img/service-5.png">
+    </div>
+  </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
