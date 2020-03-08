@@ -49,3 +49,9 @@ $('.goToTattoo').on('click', function () {
     scrollTop: $('.hereTattoo').offset().top
   }, 'slow');
 });
+// goToTraining
+$('.goToTraining').on('click', function () {
+  $('html, body').animate({
+    scrollTop: $('.hereTraining').offset().top
+  }, 'slow');
+});
