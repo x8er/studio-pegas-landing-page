@@ -624,10 +624,6 @@ header .sub {
   margin-top: 95px;
 }
 
-.training-container .row .course-reasons:last-child {
-  margin-right: 5.209vw;
-}
-
 .training-container .row img {
   max-width: 100%;
   height: auto;
@@ -730,9 +726,6 @@ header .sub {
   }
   .training-container .row .course-reasons .base-btn {
     margin: 95px auto 0 auto;
-  }
-  .training-container .row .course-reasons::last-child {
-    margin-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
