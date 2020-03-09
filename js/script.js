@@ -55,6 +55,12 @@ $('.goToTraining').on('click', function () {
     scrollTop: $('.hereTraining').offset().top
   }, 'slow');
 });
+// goToGallery
+$('.goToGallery').on('click', function () {
+  $('html, body').animate({
+    scrollTop: $('.hereGallery').offset().top
+  }, 'slow');
+});
 
 // init slick-sliders if window width more than 900px
 
