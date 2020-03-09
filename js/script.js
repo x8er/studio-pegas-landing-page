@@ -55,3 +55,30 @@ $('.goToTraining').on('click', function () {
     scrollTop: $('.hereTraining').offset().top
   }, 'slow');
 });
+
+// init slick-sliders if window width more than 900px
+
+if ($(window).width() > 900) {
+  $('.big-slider').slick({
+    infinite: true,
+    arrows: false,
+    lazyLoad: 'progressive',
+    asNavFor: '#slider-6',
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    swipe: false
+  });
+  
+  $('#slider-6').slick({
+    infinite: true,
+    prevArrow: $('.controls__to-left'),
+    nextArrow: $('.controls__to-right'),
+    lazyLoad: 'progressive',
+    asNavFor: '#slider-1, #slider-2, #slider-3, #slider-4, #slider-5',
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    swipe: false
+  });
+} else {
+  $('.slider-oim').css('display', 'none');
+}
