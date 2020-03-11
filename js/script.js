@@ -61,6 +61,12 @@ $('.goToGallery').on('click', function () {
     scrollTop: $('.hereGallery').offset().top
   }, 'slow');
 });
+// goToReviews
+$('.goToReviews').on('click', function () {
+  $('html, body').animate({
+    scrollTop: $('.hereReviews').offset().top + 60
+  }, 'slow');
+});
 
 // init slick-sliders if window width more than 900px
 
@@ -88,3 +94,12 @@ if ($(window).width() > 900) {
 } else {
   $('.slider-oim').css('display', 'none');
 }
+
+// init reviews-slider
+$('.reviews-slider').slick({
+  variableWidth: true,
+  infinite: false,
+  centerMode: true,
+  prevArrow: $('.reviews__to-left'),
+  nextArrow: $('.reviews__to-right')
+});

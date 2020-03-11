@@ -611,7 +611,168 @@ header {
   }
 }
 
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 80px 0;
+
+  .reviews {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    overflow-x: hidden;
+
+    &-slider {
+      width: inherit;
+
+      &__item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 777px;
+        width: 100%;
+        height: 418px;
+        outline: none;
+        box-sizing: border-box;
+        margin: 0 50px;
+        transform: scale(.8);
+        transition: transform .5s ease;
+        font-family: FuturaPT;
+
+        .bg-block {
+          position: absolute;
+          width: 218px;
+          height: 320px;
+          opacity: 0;
+          z-index: -1;
+          transition: opacity .5s ease;
+        }
+
+        &.slick-current {
+          transform: scale(1);
+
+          .bg-block {
+            opacity: 1;
+          }
+
+          .content__quotes {
+            opacity: 1;
+          }
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          max-width: 724px;
+          width: 100%;
+          min-height: 360px;
+          background-color: white;
+          box-sizing: border-box;
+          padding: 50px 7.72%;
+          z-index: 0;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+          &__quotes {
+            position: absolute;
+            top: 0;
+            right: 60px;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity .5s ease;
+            z-index: 1;
+          }
+
+          &__text {
+            font-weight: 300;
+            font-size: 21px;
+            line-height: 1.12em;
+            letter-spacing: 0.03em;
+            z-index: 2;
+          }
+
+          &__data {
+            margin-top: 30px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            .author {
+              font-weight: 600;
+              font-size: 20px;
+              letter-spacing: 0.03em;
+            }
+
+            .date {
+              font-weight: 200;
+              font-size: 20px;
+              letter-spacing: 0.03em;
+            }
+          }
+        }
+      }
+    }
+
+    &__to-left {
+      position: absolute;
+      top: 50%;
+      left: 25.5%;
+      padding: 20px;
+      transform: translateY(-50%) rotate(90deg);
+    }
+
+    &__to-right {
+      position: absolute;
+      top: 50%;
+      right: 25.5%;
+      padding: 20px;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+
+    &__left-blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 230px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 1) 10%, rgba(0, 212, 255, 0) 100%);
+    }
+
+    &__right-blur {
+      position: absolute;
+      top: 0;
+      right: -1px;
+      height: 100%;
+      width: 230px;
+      background: linear-gradient(270deg, rgba(255, 255, 255, 1) 10%, rgba(0, 212, 255, 0) 100%);
+    }
+  }
+
+  .base-btn {
+    margin-top: 80px;
+  }
+}
+
 // Responsiveness settings
+@media (max-width: 1366px) {
+  .reviews-container {
+    .reviews {
+      &__to-left {
+        left: 15%;
+      }
+
+      &__to-right {
+        right: 15%;
+      }
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   header {
     padding: 20px 5%;
@@ -629,6 +790,15 @@ header {
     .row {
       > img.fix {
         object-position: 80% 50%;
+      }
+    }
+  }
+
+  .reviews-container {
+    .reviews {
+      &__to-left,
+      &__to-right {
+        display: none !important;
       }
     }
   }
@@ -686,6 +856,31 @@ header {
       }
     }
   }
+
+  .reviews-container {
+    .reviews {
+      &-slider__item {
+        max-width: 90vw;
+        height: 700px;
+        padding: 2vw;
+
+        .content {
+          min-height: auto;
+          height: 100%;
+
+          &__quotes {
+            right: 3vw;
+            transform: translateY(-2vw);
+          }
+        }
+      }
+
+      &__left-blur,
+      &__right-blur {
+        display: none;
+      }
+    }
+  }
 }
 
 @media (max-width: 900px) and (orientation: landscape) {
@@ -698,6 +893,12 @@ header {
       .services__item {
         font-size: 3vh;
       }
+    }
+  }
+
+  .reviews-container {
+    .reviews-slider__item {
+      height: 420px;
     }
   }
 }
