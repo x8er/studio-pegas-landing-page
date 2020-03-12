@@ -13,6 +13,12 @@ burgerBtn.on('click', function () {
   navM.addClass('nav_m-show');
 });
 
+// scrollToTop
+$('.goToTop').on('click', function () {
+  $('html, body').animate({
+    scrollTop: $('header').offset().top
+  }, 'slow');
+});
 // scrollToAboutUs
 $('.goToAboutUs').on('click', function () {
   $('html, body').animate({
@@ -55,6 +61,12 @@ $('.goToTraining').on('click', function () {
     scrollTop: $('.hereTraining').offset().top
   }, 'slow');
 });
+// goToTrainingPerm
+$('.goToTrainingPerm').on('click', function () {
+  $('html, body').animate({
+    scrollTop: $('.hereTrainingPerm').offset().top
+  }, 'slow');
+});
 // goToGallery
 $('.goToGallery').on('click', function () {
   $('html, body').animate({
@@ -65,6 +77,12 @@ $('.goToGallery').on('click', function () {
 $('.goToReviews').on('click', function () {
   $('html, body').animate({
     scrollTop: $('.hereReviews').offset().top + 60
+  }, 'slow');
+});
+// goToContacts
+$('.goToContacts').on('click', function () {
+  $('html, body').animate({
+    scrollTop: $('.hereContacts').offset().top
   }, 'slow');
 });
 

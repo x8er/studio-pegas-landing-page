@@ -138,6 +138,15 @@ body {
   line-height: 1.6rem;
 }
 
+.drop-container .dropper__text {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: normal;
+  letter-spacing: 0.03em;
+  color: black;
+  text-align: left;
+}
+
 .drop-container:hover .dropper {
   visibility: visible;
   opacity: 1;
@@ -519,8 +528,24 @@ header .sub {
   margin-top: auto;
 }
 
+.services-container .row .service__title .dropper {
+  width: 432px;
+  top: 100%;
+  padding: 12px 30px;
+  z-index: 1;
+}
+
 .services-container .row .service__title img {
   margin: 18px 0;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
+.services-container .row .service__title:hover img {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .services-container .row .service__detail {
@@ -1086,6 +1111,7 @@ header .sub {
 }
 
 .details-container .column .feedback form div {
+  position: relative;
   width: 100%;
   margin: 20px 0;
 }
@@ -1101,7 +1127,7 @@ header .sub {
   letter-spacing: 0.03em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 16px 20px;
+  padding: 16px 60px 16px 20px;
   width: 100%;
   outline: none;
   -webkit-transition: color .2s ease;
@@ -1112,11 +1138,124 @@ header .sub {
   color: white;
 }
 
+.details-container .column .feedback form div img {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .details-container .column .feedback form .base-btn {
   background-color: white;
   border: 0;
   height: 60px;
   margin-top: 30px;
+}
+
+footer {
+  padding-top: 40px;
+  background-color: #c8d8d7;
+  width: 100%;
+}
+
+footer .container {
+  max-width: 1450px;
+  width: 100%;
+  margin: 0 auto;
+  color: black;
+}
+
+footer .container .main {
+  font-family: FuturaPT;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 5vw;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .container .main .block {
+  position: relative;
+  max-width: 220px;
+  min-height: 170px;
+  margin-right: 10px;
+}
+
+footer .container .main .block:last-child {
+  margin-right: 0;
+}
+
+footer .container .main .block__title {
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+footer .container .main .block__element {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 0.03em;
+  margin: 10px 0;
+}
+
+footer .container .main .block .base-btn {
+  position: absolute;
+  padding: 6px 0;
+  max-width: 128px;
+  bottom: 20px;
+}
+
+footer .container .main .block .base-btn:hover img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+footer .container .main .block .base-btn img {
+  margin-left: 10px;
+  width: 12px;
+  -webkit-transform: rotate(-180deg) translateY(1px);
+          transform: rotate(-180deg) translateY(1px);
+  -webkit-transition: -webkit-filter .5s ease;
+  transition: -webkit-filter .5s ease;
+  transition: filter .5s ease;
+  transition: filter .5s ease, -webkit-filter .5s ease;
+}
+
+footer .container .ground {
+  width: 100%;
+  border-top: 1px solid black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 40px 5vw;
+  font-family: Open Sans;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .container .ground__element {
+  font-size: 12px;
+}
+
+footer .container .ground__element a {
+  text-decoration: none;
+  color: black;
 }
 
 @media (max-width: 1366px) {
@@ -1225,6 +1364,9 @@ header .sub {
   }
   header .sub {
     margin-bottom: 40px;
+  }
+  .services-container .row .service .dropper {
+    width: 310px;
   }
 }
 
