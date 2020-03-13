@@ -418,7 +418,7 @@
       <img src="icons/arrow-dark.svg" class="reviews__to-left">
       <img src="icons/arrow-dark.svg" class="reviews__to-right">
     </div>
-    <div class="base-btn">оставить отзыв</div>
+    <div class="base-btn" id="showReviewModal">оставить отзыв</div>
   </div>
   <div class="details-container">
     <div class="column">
@@ -450,7 +450,7 @@
       <div class="feedback">
         <div class="feedback__title">Остались вопросы?</div>
         <div class="feedback__desc">Оставьте свой номер и мы свяжемся с Вами!</div>
-        <form action="">
+        <div class="feedback__form">
           <div>
             <input type="text" placeholder="Ваше имя">
             <img src="icons/person.svg" draggable="false">
@@ -463,8 +463,8 @@
             <input type="email" placeholder="E-mail">
             <img src="icons/mail.svg" draggable="false">
           </div>
-          <button class="base-btn">отправить</button>
-        </form>
+          <div class="base-btn">отправить</div>
+        </div>
       </div>
     </div>
   </div>
@@ -509,6 +509,34 @@
       </div>
     </div>
   </footer>
+  <div class="blackout">
+    <div class="make-review">
+      <div class="make-review__title">Оставить отзыв</div>
+      <form id="makeReviewForm">
+        <div class="inputs">
+          <input type="text" placeholder="Ваше имя">
+          <input type="text" placeholder="Телефон">
+        </div>
+        <textarea name="msg" placeholder="Текст отзыва"></textarea>
+        <div class="info">
+          <div class="symbols">Не более 500 символов</div>
+          <img src="icons/quotes.svg">
+        </div>
+        <div class="buttons">
+          <div class="base-btn close">закрыть</div>
+          <button class="base-btn">отправить</button>
+        </div>
+      </form>
+    </div>
+    <div class="ty-for-feedback">
+      <div class="text">Спасибо, администратор свяжется с Вами в ближайшее рабочее время!</div>
+      <img src="icons/close.svg" style="background-color: black; filter: invert(1);">
+    </div>
+    <div class="ty-for-review" style="background-color: #C7D7D6;">
+      <div class="text">Спасибо за Ваш отзыв!</div>
+      <img src="icons/close.svg" style="background-color: #382829; filter: invert(1);">
+    </div>
+  </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="slick/slick.min.js"></script>
   <script src="js/script.js"></script>

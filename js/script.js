@@ -85,6 +85,23 @@ $('.goToContacts').on('click', function () {
     scrollTop: $('.hereContacts').offset().top
   }, 'slow');
 });
+// listen click over blackout
+$('.blackout').on('click', function (e) {
+  if(e.target === $('.blackout')[0]) {
+    $('.make-review').css('display', 'none');
+    $('.blackout').css('display', 'none');
+  }
+});
+// close make-review modal
+$('.close').on('click', function () {
+  $('.make-review').css('display', 'none');
+  $('.blackout').css('display', 'none');
+});
+// open make-review modal
+$('#showReviewModal').on('click', function () {
+  $('.blackout').css('display', 'flex');
+  $('.make-review').css('display', 'block');
+});
 
 // init slick-sliders if window width more than 900px
 
@@ -120,4 +137,8 @@ $('.reviews-slider').slick({
   centerMode: true,
   prevArrow: $('.reviews__to-left'),
   nextArrow: $('.reviews__to-right')
+});
+
+$('#makeReviewForm').on('submit', function (e) {
+  e.preventDefault();
 });

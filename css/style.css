@@ -32,6 +32,7 @@ html {
 }
 
 body {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,6 +153,177 @@ body {
   opacity: 1;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
+}
+
+.blackout {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blackout .make-review {
+  max-width: 922px;
+  width: 100%;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 50px 88px;
+  font-family: FuturaPT;
+}
+
+.blackout .make-review__title {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #454545;
+}
+
+.blackout .make-review .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.blackout .make-review .inputs input {
+  border: 0;
+  border-bottom: 1px solid black;
+  max-width: 336px;
+  width: 100%;
+  margin: 10px;
+  padding: 8px 0;
+  font-family: FuturaPT;
+  font-weight: 300;
+  font-size: 17px;
+  color: #525252;
+  outline: none;
+}
+
+.blackout .make-review textarea {
+  display: block;
+  resize: none;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  min-height: 300px;
+  background-color: #f3f3f3;
+  font-family: FuturaPT;
+  font-weight: 300;
+  font-size: 17px;
+  outline: none;
+}
+
+.blackout .make-review .info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f3f3f3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+}
+
+.blackout .make-review .info .symbols {
+  font-family: FuturaPT;
+  font-size: 12px;
+  font-weight: 300;
+  color: #242424;
+}
+
+.blackout .make-review .info img {
+  position: absolute;
+  height: 35px;
+  right: 15px;
+  top: -7px;
+}
+
+.blackout .make-review .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blackout .make-review .buttons .base-btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 10px;
+  padding: 20px;
+}
+
+.blackout .make-review .buttons button.base-btn {
+  background-color: #c7d7d6;
+  border: 1px solid #c7d7d6;
+}
+
+.blackout .ty-for-feedback,
+.blackout .ty-for-review {
+  position: relative;
+  display: none;
+  background-color: white;
+  color: #393939;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 22px;
+  max-width: 856px;
+  width: 100%;
+  min-height: 275px;
+  font-family: FuturaPT;
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.blackout .ty-for-feedback .text,
+.blackout .ty-for-review .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.blackout .ty-for-feedback img,
+.blackout .ty-for-review img {
+  cursor: pointer;
+  position: absolute;
+  top: 7px;
+  right: 40px;
+  padding: 10px;
 }
 
 header {
@@ -1094,7 +1266,7 @@ header .sub {
   text-align: center;
 }
 
-.details-container .column .feedback form {
+.details-container .column .feedback__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1110,13 +1282,13 @@ header .sub {
   margin: 50px 20px 0 20px;
 }
 
-.details-container .column .feedback form div {
+.details-container .column .feedback__form div {
   position: relative;
   width: 100%;
   margin: 20px 0;
 }
 
-.details-container .column .feedback form div input {
+.details-container .column .feedback__form div input {
   display: block;
   border: 1px solid white;
   background-color: transparent;
@@ -1134,11 +1306,11 @@ header .sub {
   transition: color .2s ease;
 }
 
-.details-container .column .feedback form div input:focus {
+.details-container .column .feedback__form div input:focus {
   color: white;
 }
 
-.details-container .column .feedback form div img {
+.details-container .column .feedback__form div img {
   position: absolute;
   top: 50%;
   right: 24px;
@@ -1146,10 +1318,10 @@ header .sub {
           transform: translateY(-50%);
 }
 
-.details-container .column .feedback form .base-btn {
+.details-container .column .feedback__form .base-btn {
   background-color: white;
   border: 0;
-  height: 60px;
+  padding: 17px 0;
   margin-top: 30px;
 }
 
@@ -1289,6 +1461,12 @@ footer .container .ground__element a {
 }
 
 @media (max-width: 900px) {
+  .blackout .make-review {
+    padding: 10px 6vw;
+  }
+  .blackout .make-review .inputs {
+    margin: 10px 0;
+  }
   header {
     padding: 20px 0 20px 0;
   }
@@ -1344,6 +1522,13 @@ footer .container .ground__element a {
 }
 
 @media (max-width: 900px) and (orientation: landscape) {
+  .blackout .make-review .inputs {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .blackout .make-review textarea {
+    min-height: auto;
+  }
   header .nav_m .item {
     font-size: 4vh;
   }
@@ -1371,6 +1556,15 @@ footer .container .ground__element a {
 }
 
 @media (max-width: 425px) {
+  .blackout .make-review {
+    padding: 10px 6vw;
+  }
+  .blackout .make-review .inputs {
+    margin: 10px 0;
+  }
+  .blackout .make-review textarea {
+    min-height: 150px;
+  }
   header {
     background-position: 65% 50%;
   }
