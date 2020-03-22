@@ -385,7 +385,7 @@ header {
         text-align: center;
         font-family: FuturaPT;
         font-weight: 450;
-        font-size: 6vw;
+        font-size: 4vw;
         white-space: nowrap;
         text-transform: uppercase;
         padding: 10px 0;
@@ -409,7 +409,7 @@ header {
           white-space: nowrap;
           font-family: FuturaPT;
           text-transform: none;
-          font-size: 5vw;
+          font-size: 4vw;
           font-weight: 200;
           padding: 2px 0;
         }
@@ -883,7 +883,7 @@ header {
     &__to-left {
       position: absolute;
       top: 50%;
-      left: 25.5%;
+      left: 25%;
       padding: 20px;
       transform: translateY(-50%) rotate(90deg);
     }
@@ -891,7 +891,7 @@ header {
     &__to-right {
       position: absolute;
       top: 50%;
-      right: 25.5%;
+      right: 25%;
       padding: 20px;
       transform: translateY(-50%) rotate(-90deg);
     }
@@ -1035,7 +1035,7 @@ header {
             display: block;
             border: 1px solid white;
             background-color: transparent;
-            color: #a1a1a1;
+            color: #dcdcdc;
             font-family: FuturaPT;
             font-size: 20px;
             font-weight: 200;
@@ -1084,53 +1084,59 @@ footer {
     .main {
       font-family: FuturaPT;
       display: flex;
-      justify-content: space-between;
       box-sizing: border-box;
-      padding: 0 5vw;
+      // padding: 0 5vw;
       width: 100%;
       flex-wrap: wrap;
 
-      .block {
-        position: relative;
-        max-width: 220px;
-        min-height: 170px;
-        margin-right: 10px;
+      .half {
+        display: flex;
+        justify-content: space-evenly;
+        min-width: 425px;
+        width: 50%;
 
-        &:last-child {
-          margin-right: 0;
-        }
+        .block {
+          position: relative;
+          max-width: 220px;
+          min-height: 170px;
+          margin-right: 10px;
 
-        &__title {
-          text-transform: uppercase;
-          font-size: 17px;
-          font-weight: 300;
-          letter-spacing: 0.05em;
-          margin-bottom: 20px;
-        }
-
-        &__element {
-          cursor: pointer;
-          font-size: 15px;
-          font-weight: 200;
-          letter-spacing: 0.03em;
-          margin: 10px 0;
-        }
-
-        .base-btn {
-          position: absolute;
-          padding: 6px 0;
-          max-width: 128px;
-          bottom: 20px;
-
-          &:hover img {
-            filter: invert(1);
+          &:last-child {
+            margin-right: 0;
           }
 
-          img {
-            margin-left: 10px;
-            width: 12px;
-            transform: rotate(-180deg) translateY(1px);
-            transition: filter .5s ease;
+          &__title {
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+          }
+
+          &__element {
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 200;
+            letter-spacing: 0.03em;
+            margin: 10px 0;
+          }
+
+          .base-btn {
+            position: absolute;
+            padding: 6px 0;
+            max-width: 128px;
+            bottom: 20px;
+
+            &:hover img {
+              filter: invert(1);
+            }
+
+            img {
+              margin-left: 10px;
+              width: 12px;
+              transform: rotate(-180deg) translateY(1px);
+              transition: filter .5s ease;
+            }
           }
         }
       }
@@ -1152,255 +1158,6 @@ footer {
         a {
           text-decoration: none;
           color: black;
-        }
-      }
-    }
-  }
-}
-
-// Responsiveness settings
-@media (max-width: 1366px) {
-  .reviews-container {
-    .reviews {
-      &__to-left {
-        left: 15%;
-      }
-
-      &__to-right {
-        right: 15%;
-      }
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  header {
-    padding: 20px 5%;
-    background-position: 80% 50%;
-
-    .sub {
-      width: 80%;
-      padding-left: 0;
-      align-self: flex-end;
-      border-bottom: 1px solid white;
-    }
-  }
-
-  .services-container {
-    .row {
-      > img.fix {
-        object-position: 80% 50%;
-      }
-    }
-  }
-
-  .reviews-container {
-    .reviews {
-      &__to-left,
-      &__to-right {
-        display: none !important;
-      }
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  .blackout {
-    .make-review {
-      padding: 10px 6vw;
-
-      .inputs {
-        margin: 10px 0;
-      }
-    }
-  }
-
-  header {
-    padding: 20px 0 20px 0;
-
-    #burgerBtn {
-      display: block;
-    }
-
-    .logo_m {
-      display: block;
-    }
-
-    .nav {
-      display: none;
-    }
-
-    .sub {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-  }
-
-  .services-container {
-    .row {
-      height: auto;
-
-      .service {
-        width: 100%;
-
-        .base-btn {
-          margin-top: 30px;
-        }
-      }
-
-      > img {
-        width: 100%;
-      }
-    }
-  }
-
-  .gallery-container {
-    .column {
-      .stable {
-        height: auto;
-        padding: 30px;
-
-        &__main {
-          height: 300px;
-        }
-      }
-    }
-  }
-
-  .reviews-container {
-    .reviews {
-      &-slider__item {
-        max-width: 90vw;
-        height: 700px;
-        padding: 2vw;
-
-        .content {
-          min-height: auto;
-          height: 100%;
-
-          &__quotes {
-            right: 3vw;
-            transform: translateY(-2vw);
-          }
-        }
-      }
-
-      &__left-blur,
-      &__right-blur {
-        display: none;
-      }
-    }
-  }
-}
-
-@media (max-width: 900px) and (orientation: landscape) {
-  .blackout {
-    .make-review {
-      .inputs {
-        flex-wrap: nowrap;
-      }
-
-      textarea {
-        min-height: auto;
-      }
-    }
-  }
-
-  header {
-    .nav_m {
-      .item {
-        font-size: 4vh;
-      }
-
-      .services__item {
-        font-size: 3vh;
-      }
-    }
-  }
-
-  .reviews-container {
-    .reviews-slider__item {
-      height: 420px;
-    }
-  }
-}
-
-@media (max-width: 900px) and (orientation: portrait) {
-  header {
-    .title {
-      display: none;
-
-      &_m {
-        display: block;
-      }
-    }
-
-    .sub {
-      margin-bottom: 40px;
-    }
-  }
-
-  .services-container {
-    .row {
-      .service {
-        .dropper {
-          width: 310px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 425px) {
-  .blackout {
-    .make-review {
-      padding: 10px 6vw;
-
-      .inputs {
-        margin: 10px 0;
-      }
-
-      textarea {
-        min-height: 150px;
-      }
-    }
-  }
-
-  header {
-    background-position: 65% 50%;
-
-    .sub {
-      width: 75%;
-      font-size: 0.9rem;
-    }
-  }
-
-  .training-container {
-    padding: 40px 0;
-
-    .row {
-      .course {
-        &__title {
-          font-size: 26px;
-          padding: 20px 10px;
-        }
-
-        &-reasons {
-          margin: 34px 0 0 0;
-
-          &__title {
-            padding-left: 0;
-          }
-
-          &__item {
-            .text {
-              font-size: 18px;
-            }
-          }
-
-          .base-btn {
-            margin: 95px auto 0 auto;
-          }
         }
       }
     }

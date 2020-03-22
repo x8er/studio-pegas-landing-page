@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -244,7 +245,7 @@
             </div>
           </div>
         </div>
-        <div class="service__detail">
+        <div class="service__detail invert-dot">
           <div>Тату на теле — любого размера</div>
           <div>Создание экскиза / нанесение татуировки / <span style="white-space: nowrap;">рекомендации по
               уходу</span>
@@ -364,6 +365,7 @@
           <div class="bg-block" style="background-color: #c8d8d7; top: 0; left: 0;"></div>
           <div class="bg-block" style="background-color: #393939; right: 0; bottom: 0;"></div>
           <div class="content">
+            <img src="icons/quotes.svg" class="content__quotes">
             <div class="content__text">
               Проходила обучение на курсах по моделированию бровей с восстановлением у Юлианы. Узнала много нового и
               интересного, много тонкостей и нюансов, о которых даже не догадывалась. Полученные знания применяю для
@@ -376,13 +378,13 @@
               <div class="author">Александра</div>
               <div class="date">10.02.2020</div>
             </div>
-            <img src="icons/quotes.svg" class="content__quotes">
           </div>
         </div>
         <div class="reviews-slider__item">
           <div class="bg-block" style="background-color: #c8d8d7; top: 0; left: 0;"></div>
           <div class="bg-block" style="background-color: #393939; right: 0; bottom: 0;"></div>
           <div class="content">
+            <img src="icons/quotes.svg" class="content__quotes">
             <div class="content__text">
               Я в восторге от работы, результат просто превзошел все мои ожидания, я безумно безумно рада что
               решилась,
@@ -393,13 +395,13 @@
               <div class="author">Александра</div>
               <div class="date">21.01.2020</div>
             </div>
-            <img src="icons/quotes.svg" class="content__quotes">
           </div>
         </div>
         <div class="reviews-slider__item">
           <div class="bg-block" style="background-color: #c8d8d7; top: 0; left: 0;"></div>
           <div class="bg-block" style="background-color: #393939; right: 0; bottom: 0;"></div>
           <div class="content">
+            <img src="icons/quotes.svg" class="content__quotes">
             <div class="content__text">
               Очень все понравилось, постепенно применяю полученные знания на практике. Ваш курс нашла в Инстаграме
               случайно. Выбор курсов сейчас большой, но остановилась на Вашем потому что, обучение в 3 дня и занятия
@@ -409,7 +411,6 @@
               <div class="author">Александра</div>
               <div class="date">15.02.2020</div>
             </div>
-            <img src="icons/quotes.svg" class="content__quotes">
           </div>
         </div>
       </div>
@@ -471,35 +472,39 @@
   <footer>
     <div class="container">
       <div class="main">
-        <div class="block">
-          <div class="block__title">studio pegas</div>
-          <div class="block__element goToTop">Главная</div>
-          <div class="block__element goToAboutUs">О нас</div>
-          <div class="block__element goToBarber">Услуги</div>
-          <div class="block__element goToGallery">Галерея</div>
-          <div class="block__element goToContacts">Контакты</div>
+        <div class="half">
+          <div class="block">
+            <div class="block__title">studio pegas</div>
+            <div class="block__element goToTop">Главная</div>
+            <div class="block__element goToAboutUs">О нас</div>
+            <div class="block__element goToBarber">Услуги</div>
+            <div class="block__element goToGallery">Галерея</div>
+            <div class="block__element goToContacts">Контакты</div>
+          </div>
+          <div class="block">
+            <div class="block__title">услуги</div>
+            <div class="block__element goToBarber">Парикмахерские услуги</div>
+            <div class="block__element goToEyebrow">Брови и ресницы</div>
+            <div class="block__element goToPerMakeup">Перманентный макияж</div>
+            <div class="block__element goToMakeup">Макияж</div>
+            <div class="block__element goToTattoo">Тату</div>
+            <div class="block__element goToTraining">Обучение</div>
+          </div>
         </div>
-        <div class="block">
-          <div class="block__title">услуги</div>
-          <div class="block__element goToBarber">Парикмахерские услуги</div>
-          <div class="block__element goToEyebrow">Брови и ресницы</div>
-          <div class="block__element goToPerMakeup">Перманентный макияж</div>
-          <div class="block__element goToMakeup">Макияж</div>
-          <div class="block__element goToTattoo">Тату</div>
-          <div class="block__element goToTraining">Обучение</div>
-        </div>
-        <div class="block">
-          <div class="block__title">обучение</div>
-          <div class="block__element goToTraining">Обучение моделированию и окрашиванию бровей</div>
-          <div class="block__element goToTrainingPerm">Обучение по перманентному макияжу</div>
-        </div>
-        <div class="block">
-          <div class="block__title">помощь</div>
-          <div class="block__element">Связаться с нами</div>
-          <div class="block__element">Политика конфиденциальности</div>
-          <div class="base-btn goToTop">
-            Наверх
-            <img src="icons/arrow-dark.svg">
+        <div class="half">
+          <div class="block">
+            <div class="block__title">обучение</div>
+            <div class="block__element goToTraining">Обучение моделированию и окрашиванию бровей</div>
+            <div class="block__element goToTrainingPerm">Обучение по перманентному макияжу</div>
+          </div>
+          <div class="block">
+            <div class="block__title">помощь</div>
+            <div class="block__element">Связаться с нами</div>
+            <div class="block__element">Политика конфиденциальности</div>
+            <div class="base-btn goToTop">
+              Наверх
+              <img src="icons/arrow-dark.svg">
+            </div>
           </div>
         </div>
       </div>

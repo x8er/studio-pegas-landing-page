@@ -133,6 +133,7 @@ if ($(window).width() > 900) {
 // init reviews-slider
 $('.reviews-slider').slick({
   variableWidth: true,
+  adaptiveHeight: true,
   infinite: false,
   centerMode: true,
   prevArrow: $('.reviews__to-left'),
