@@ -143,3 +143,14 @@ $('.reviews-slider').slick({
 $('#makeReviewForm').on('submit', function (e) {
   e.preventDefault();
 });
+
+ymaps.ready(function() {
+  var map = new ymaps.Map("map", {
+      center: [53.910543, 27.529698],
+      zoom: 16
+  });
+
+  var myPlacemark = new ymaps.Placemark([53.910543, 27.529698]);
+
+  map.geoObjects.add(myPlacemark);
+});

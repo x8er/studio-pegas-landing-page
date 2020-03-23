@@ -1,0 +1,30 @@
+header {
+  background-image: url("/img/browmaster-header-bg.jpg");
+
+  .nav {
+    &_m {
+      background: #82847f;
+      justify-content: flex-start;
+      box-sizing: border-box;
+      padding-top: 100px;
+    }
+
+    .item {
+      color: black;
+    }
+
+    .line {
+      background-color: black;
+    }
+  }
+}
+
+.about-us-container {
+  .blocks {
+    .block {
+      &.filled {
+        background-color: #e1d4d0;
+      }
+    }
+  }
+}

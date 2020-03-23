@@ -137,6 +137,13 @@ body {
 .drop-container .dropper__element {
   font-size: 1rem;
   line-height: 1.6rem;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  color: white;
+}
+
+.drop-container .dropper__element:hover {
+  color: #c7c7c7;
 }
 
 .drop-container .dropper__text {
@@ -380,6 +387,7 @@ header .nav {
 }
 
 header .nav .logo {
+  padding-top: 15px;
   margin: 0 30px;
 }
 
@@ -398,6 +406,12 @@ header .nav .item {
   text-transform: uppercase;
   color: white;
   margin: 15px 14px 0 14px;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+header .nav .item:hover {
+  color: #c7c7c7;
 }
 
 header .nav .item img {
@@ -846,6 +860,12 @@ header .sub {
   margin-top: 95px;
 }
 
+.training-container .row .course-reasons .base-btn a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .training-container .row img {
   max-width: 100%;
   height: auto;
@@ -947,6 +967,16 @@ header .sub {
           box-sizing: border-box;
   padding: 0 20px;
   width: 100%;
+}
+
+.gallery-container .controls img {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.gallery-container .controls img:hover {
+  -webkit-filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(218deg) brightness(118%) contrast(56%);
+          filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(218deg) brightness(118%) contrast(56%);
 }
 
 .gallery-container .controls__to-right {
@@ -1116,6 +1146,13 @@ header .sub {
   padding: 20px;
   -webkit-transform: translateY(-50%) rotate(-90deg);
           transform: translateY(-50%) rotate(-90deg);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.reviews-container .reviews__to-right:hover {
+  -webkit-filter: invert(47%) sepia(0%) saturate(0%) hue-rotate(161deg) brightness(94%) contrast(85%);
+          filter: invert(47%) sepia(0%) saturate(0%) hue-rotate(161deg) brightness(94%) contrast(85%);
 }
 
 .reviews-container .reviews__left-blur {
@@ -1195,6 +1232,21 @@ header .sub {
   margin-top: 25px;
 }
 
+.details-container .column .contacts__subtitle.s-clock::before {
+  content: url("/icons/s-clock.svg");
+  margin-right: 5px;
+}
+
+.details-container .column .contacts__subtitle.s-marker::before {
+  content: url("/icons/s-marker.svg");
+  margin-right: 5px;
+}
+
+.details-container .column .contacts__subtitle.s-phone::before {
+  content: url("/icons/s-phone.svg");
+  margin-right: 5px;
+}
+
 .details-container .column .contacts__text {
   font-size: 20px;
   font-weight: 300;
@@ -1222,8 +1274,8 @@ header .sub {
   margin: 0 10px;
 }
 
-.details-container .column .map {
-  min-height: 400px;
+.details-container .column #map {
+  height: 476px;
 }
 
 .details-container .column .feedback {
@@ -1306,8 +1358,20 @@ header .sub {
   transition: color .2s ease;
 }
 
-.details-container .column .feedback__form div input:focus {
-  color: white;
+.details-container .column .feedback__form div input::-webkit-input-placeholder {
+  color: #dcdcdc;
+}
+
+.details-container .column .feedback__form div input:-ms-input-placeholder {
+  color: #dcdcdc;
+}
+
+.details-container .column .feedback__form div input::-ms-input-placeholder {
+  color: #dcdcdc;
+}
+
+.details-container .column .feedback__form div input::placeholder {
+  color: #dcdcdc;
 }
 
 .details-container .column .feedback__form div img {
@@ -1319,10 +1383,27 @@ header .sub {
 }
 
 .details-container .column .feedback__form .base-btn {
-  background-color: white;
-  border: 0;
+  border-color: white;
+  color: black;
   padding: 17px 0;
   margin-top: 30px;
+}
+
+.details-container .column .feedback__form .base-btn::before {
+  right: auto;
+  left: 0px;
+  width: 100%;
+  background-color: white;
+}
+
+.details-container .column .feedback__form .base-btn:hover {
+  color: white;
+}
+
+.details-container .column .feedback__form .base-btn:hover::before {
+  left: auto;
+  right: 0px;
+  width: 0%;
 }
 
 footer {
@@ -1343,8 +1424,12 @@ footer .container .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 0 20px;
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1358,12 +1443,15 @@ footer .container .main .half {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   min-width: 425px;
-  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 footer .container .main .half .block {
   position: relative;
   max-width: 220px;
+  min-width: 220px;
   min-height: 170px;
   margin-right: 10px;
 }

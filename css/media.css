@@ -1,4 +1,7 @@
 @media (max-width: 1600px) {
+  header .sub {
+    padding: 0 0 5px 13%;
+  }
   .reviews-container .reviews__to-left {
     left: 15%;
   }
@@ -344,6 +347,9 @@
   .details-container .column .contacts__social a img {
     width: 7.5vw;
   }
+  .details-container .column #map {
+    height: 210px;
+  }
   .details-container .column .feedback__title {
     font-size: 5.62vw;
   }
@@ -369,6 +375,37 @@
     font-size: 2.5vw;
     padding: 4px 0;
     margin-top: 15px;
+  }
+  footer .container .main {
+    padding: 0;
+  }
+  footer .container .main .half {
+    min-width: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .container .main .half:last-child {
+    margin-top: 10px;
+  }
+  footer .container .main .half .block {
+    min-width: auto;
+    max-width: auto;
+    width: 43.75vw;
+  }
+  footer .container .main .half .block__title {
+    font-size: 3.43vw;
+  }
+  footer .container .main .half .block__element {
+    font-size: 2.81vw;
+  }
+  footer .container .main .half .block .base-btn {
+    max-width: 23.12vw;
+    padding: 0.93vw 0;
+  }
+  footer .container .main .half .block .base-btn img {
+    width: 10px;
+    margin-left: 5px;
   }
 }
 /*# sourceMappingURL=media.css.map */

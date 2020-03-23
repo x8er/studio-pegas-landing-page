@@ -10,63 +10,33 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/browmaster.css">
   <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
   <header>
     <!-- Mobile pos logo and burgerBtn -->
-    <img src="icons/logo.png" class="logo_m">
+    <img src="icons/logo-dark.png" class="logo_m">
     <img src="icons/menu.svg" id="burgerBtn">
     <div class="nav">
       <div class="line"></div>
-      <img src="icons/logo.png" class="logo">
+      <img src="icons/logo-dark.png" class="logo">
       <div class="line"></div>
-      <div class="item goToAboutUs">о нас</div>
+      <div class="item goToAboutUs">о тренере</div>
       <div class="line"></div>
-      <div class="item drop-container">
-        услуги
-        <img src="icons/arrow.svg">
-        <div class="dropper">
-          <div class="dropper__element goToBarber">парикмахерские услуги</div>
-          <div class="dropper__element goToEyebrow">брови и ресницы</div>
-          <div class="dropper__element goToPerMakeup">перманентный макияж</div>
-          <div class="dropper__element goToMakeup">макияж</div>
-          <div class="dropper__element goToTattoo">тату</div>
-          <div class="dropper__element goToTraining">обучение</div>
-        </div>
-      </div>
+      <div class="item drop-container">программы обучения</div>
       <div class="line"></div>
-      <div class="item goToGallery">галерея</div>
+      <div class="item goToGallery">отзывы</div>
       <div class="line"></div>
       <div class="item goToContacts">контакты</div>
       <div class="line"></div>
     </div>
-    <div class="title">
-      <div class="title-pe">
-        <div class="letters">P<span style="letter-spacing: 25px;">E</span></div>
-      </div>
-      <div class="title-gas">
-        <div class="letters">G</div>
-        <div class="letters" style="margin-left: 1vw">AS</div>
-      </div>
-    </div>
-    <div class="title_m">PEGAS</div>
-    <div class="sub">профессиональное пространство</div>
     <!-- Mobile navigation -->
     <div class="nav_m">
       <img src="icons/close.svg">
-      <div class="item goToAboutUs">о нас</div>
-      <div class="item goToBarber">услуги</div>
-      <div class="services">
-        <div class="services__item goToBarber">Парикмахерские услуги</div>
-        <div class="services__item goToEyebrow">Брови и ресницы</div>
-        <div class="services__item goToPerMakeup">Перманентный макияж</div>
-        <div class="services__item goToMakeup">Макияж</div>
-        <div class="services__item goToTattoo">Тату</div>
-        <div class="services__item goToTraining">Обучение</div>
-      </div>
-      <div class="item goToGallery">галерея</div>
+      <div class="item goToAboutUs">о тренере</div>
+      <div class="item goToBarber">программы обучения</div>
       <div class="item goToReviews">отзывы</div>
       <div class="item goToContacts">контакты</div>
     </div>
@@ -278,7 +248,7 @@
             <div class="number" style="background-color: #E1D4D0;">3</div>
             <div class="text">Сопровождение на протяжении 3х месяцев.</div>
           </div>
-          <div class="base-btn invert"><a href="#">подробнее</a></div>
+          <div class="base-btn invert">подробнее</div>
         </div>
       </div>
     </div>
@@ -301,7 +271,7 @@
             <div class="number" style="background-color: #C8D8D7;">3</div>
             <div class="text">По итогу, вы получаете готовое портфолио и диплом мастера.</div>
           </div>
-          <div class="base-btn invert"><a href="#">подробнее</a></div>
+          <div class="base-btn invert">подробнее</div>
         </div>
       </div>
       <img src="img/course-2.jpg">
@@ -425,11 +395,11 @@
     <div class="column">
       <div class="contacts hereContacts">
         <div class="contacts__title">контакты</div>
-        <div class="contacts__subtitle s-clock">Время работы:</div>
+        <div class="contacts__subtitle">Время работы:</div>
         <div class="contacts__text">10:00-22:00 БЕЗ ВЫХОДНЫХ</div>
-        <div class="contacts__subtitle s-marker">Адрес:</div>
+        <div class="contacts__subtitle">Адрес:</div>
         <div class="contacts__text">ул. Амураторская, д. 4, каб. 101 (метро Молодежная/Фрунзенская)</div>
-        <div class="contacts__subtitle s-phone">Телефон:</div>
+        <div class="contacts__subtitle">Телефон:</div>
         <div class="contacts__text">
           <a href="tel:+375298359939">+375 (29) 835 99 39</a>
           <a href="tel:+375445799939">+375 (44) 579 99 39</a>
@@ -443,7 +413,9 @@
           </a>
         </div>
       </div>
-      <div id="map"></div>
+      <div class="map">
+        <img src="img/map.png" style="max-width: 100%; height: auto;">
+      </div>
     </div>
     <div class="column">
       <div class="feedback">
@@ -542,8 +514,6 @@
   </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="slick/slick.min.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=6c9f79df-247e-45c2-86fb-6a04085d4ebd&lang=ru_RU"
-    type="text/javascript"></script>
   <script src="js/script-main.js"></script>
 </body>
 

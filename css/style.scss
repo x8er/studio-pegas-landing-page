@@ -124,6 +124,12 @@ body {
     &__element {
       font-size: 1rem;
       line-height: 1.6rem;
+      transition: all .2s ease;
+      color: white;
+
+      &:hover {
+        color: #c7c7c7;
+      }
     }
 
     &__text {
@@ -323,6 +329,7 @@ header {
     align-items: center;
 
     .logo {
+      padding-top: 15px;
       margin: 0 30px;
     }
 
@@ -337,6 +344,11 @@ header {
       text-transform: uppercase;
       color: white;
       margin: 15px 14px 0 14px;
+      transition: all .2s ease;
+
+      &:hover {
+        color: #c7c7c7;
+      }
 
       img {
         margin: 0 0 0 4px;
@@ -682,6 +694,12 @@ header {
 
         .base-btn {
           margin-top: 95px;
+
+          a {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+          }
         }
       }
     }
@@ -766,6 +784,13 @@ header {
     box-sizing: border-box;
     padding: 0 20px;
     width: 100%;
+
+    img {
+      transition: all .2s ease;
+      &:hover {
+        filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(218deg) brightness(118%) contrast(56%);
+      }
+    }
 
     &__to-right {
       transform: rotate(180deg);
@@ -894,6 +919,11 @@ header {
       right: 25%;
       padding: 20px;
       transform: translateY(-50%) rotate(-90deg);
+      transition: all .2s ease;
+
+      &:hover {
+        filter: invert(47%) sepia(0%) saturate(0%) hue-rotate(161deg) brightness(94%) contrast(85%);
+      }
     }
 
     &__left-blur {
@@ -955,6 +985,27 @@ header {
         letter-spacing: 0.03em;
         color: #d7d7d7;
         margin-top: 25px;
+
+        &.s-clock {
+          &::before {
+            content: url('/icons/s-clock.svg');
+            margin-right: 5px;
+          }
+        }
+
+        &.s-marker {
+          &::before {
+            content: url('/icons/s-marker.svg');
+            margin-right: 5px;
+          }
+        }
+
+        &.s-phone {
+          &::before {
+            content: url('/icons/s-phone.svg');
+            margin-right: 5px;
+          }
+        }
       }
 
       &__text {
@@ -985,8 +1036,8 @@ header {
       }
     }
 
-    .map {
-      min-height: 400px;
+    #map {
+      height: 476px;
     }
 
     .feedback {
@@ -1046,8 +1097,8 @@ header {
             outline: none;
             transition: color .2s ease;
 
-            &:focus {
-              color: white;
+            &::placeholder {
+              color: #dcdcdc;
             }
           }
 
@@ -1060,10 +1111,27 @@ header {
         }
 
         .base-btn {
-          background-color: white;
-          border: 0;
+          border-color: white;
+          color: black;
           padding: 17px 0;
           margin-top: 30px;
+
+          &::before {
+            right: auto;
+            left: 0px;
+            width: 100%;
+            background-color: white;
+          }
+
+          &:hover {
+            color: white;
+          }
+
+          &:hover::before {
+            left: auto;
+            right: 0px;
+            width: 0%;
+          }
         }
       }
     }
@@ -1084,8 +1152,9 @@ footer {
     .main {
       font-family: FuturaPT;
       display: flex;
+      justify-content: center;
       box-sizing: border-box;
-      // padding: 0 5vw;
+      padding: 0 20px;
       width: 100%;
       flex-wrap: wrap;
 
@@ -1093,11 +1162,12 @@ footer {
         display: flex;
         justify-content: space-evenly;
         min-width: 425px;
-        width: 50%;
+        flex-grow: 1;
 
         .block {
           position: relative;
           max-width: 220px;
+          min-width: 220px;
           min-height: 170px;
           margin-right: 10px;
 
