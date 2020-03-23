@@ -26,6 +26,9 @@
     -o-object-position: 80% 50%;
        object-position: 80% 50%;
   }
+  .training-container .row .course {
+    min-width: auto;
+  }
   .reviews-container .reviews__left-blur, .reviews-container .reviews__right-blur {
     display: none;
   }
@@ -77,7 +80,7 @@
     padding: 30px;
   }
   .gallery-container .column .stable__main {
-    height: 300px;
+    height: 160px;
   }
   .reviews-container .reviews-slider__item {
     max-width: 90vw;

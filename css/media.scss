@@ -39,6 +39,14 @@
     }
   }
 
+  .training-container {
+    .row {
+      .course {
+        min-width: auto;
+      }
+    }
+  }
+
   .reviews-container {
     .reviews {
       &__left-blur,
@@ -114,7 +122,7 @@
         padding: 30px;
 
         &__main {
-          height: 300px;
+          height: 160px;
         }
       }
     }
