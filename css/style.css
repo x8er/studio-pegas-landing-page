@@ -177,6 +177,7 @@ body {
 }
 
 .blackout .make-review {
+  display: none;
   max-width: 922px;
   width: 100%;
   background-color: white;
@@ -353,6 +354,7 @@ header {
   background-position: center;
   background-size: cover;
   overflow-x: hidden;
+  font-family: FuturaPT;
 }
 
 header #burgerBtn {

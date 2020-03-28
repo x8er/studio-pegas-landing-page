@@ -88,17 +88,20 @@ $('.goToContacts').on('click', function () {
 // listen click over blackout
 $('.blackout').on('click', function (e) {
   if(e.target === $('.blackout')[0]) {
+    $('body').css('overflow', 'visible');
     $('.make-review').css('display', 'none');
     $('.blackout').css('display', 'none');
   }
 });
 // close make-review modal
 $('.close').on('click', function () {
+  $('body').css('overflow', 'visible');
   $('.make-review').css('display', 'none');
   $('.blackout').css('display', 'none');
 });
 // open make-review modal
 $('#showReviewModal').on('click', function () {
+  $('body').css('overflow', 'hidden');
   $('.blackout').css('display', 'flex');
   $('.make-review').css('display', 'block');
 });

@@ -1,5 +1,5 @@
 header {
-  background-image: url("/img/browmaster-header-bg.jpg");
+  background: center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
 
   .nav {
     &_m {
@@ -11,19 +11,792 @@ header {
 
     .item {
       color: black;
+
+      &:hover {
+        color: black;
+      }
     }
 
     .line {
       background-color: black;
     }
   }
+
+  .pages-title {
+    max-width: 640px;
+    margin: auto 0 auto 13%;
+
+    &__name {
+      font-weight: 600;
+      font-size: 40px;
+    }
+
+    &__basic {
+      max-width: 520px;
+      font-weight: 300;
+      font-size: 30px;
+      margin-top: 20px;
+    }
+
+    .base-btn {
+      margin-top: 50px;
+    }
+  }
 }
 
 .about-us-container {
+  .title {
+    margin-top: 70px;
+  }
+
   .blocks {
+    max-width: 870px;
+    margin: 100px 0;
+
     .block {
+      padding: 0 14px;
+
+      &__title {
+        text-align: center;
+        font-weight: 450;
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      img {
+        margin: 20px 0 0 0;
+      }
+
       &.filled {
         background-color: #e1d4d0;
+      }
+    }
+  }
+}
+
+.teacher-row,
+.training-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #393939;
+  font-family: FuturaPT;
+  width: 100%;
+  padding: 100px 0;
+
+  .info {
+    max-width: 411px;
+    width: 100%;
+    margin: 0 6.30vw;
+    min-width: 279px;
+
+    .status {
+      font-weight: 200;
+      font-size: 20px;
+    }
+
+    .title {
+      font-weight: 600;
+      font-size: 33px;
+      margin-bottom: 60px;
+    }
+
+    .text {
+      font-weight: 300;
+      font-size: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  .pic {
+    margin: 0 6.30vw;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.training-row {
+  background-color: transparent;
+  color: black;
+
+  .info {
+    max-width: 545px;
+
+    .text {
+      img {
+        display: block;
+        height: 26px;
+        width: 15px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.first-lesson-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: FuturaPT;
+  background-color: #393939;
+  width: 100%;
+  padding: 80px 0;
+
+  .text {
+    color: white;
+    margin: 0 58px;
+    font-weight: 450;
+    font-size: 24px;
+  }
+
+  .base-btn {
+    background-color: white;
+    margin: 15px 58px;
+  }
+}
+
+.programs-container {
+  display: flex;
+  width: 100%;
+  font-family: FuturaPT;
+
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px 10px;
+
+    .main {
+      &__title {
+        font-weight: 600;
+        font-size: 33px;
+        margin-bottom: 50px;
+      }
+
+      &__element {
+        cursor: pointer;
+        font-weight: 450;
+        font-size: 24px;
+        margin: 20px 0;
+
+        &.mobile {
+          display: none;
+        }
+
+        &::before {
+          display: inline-block;
+          content: url('/ico/arrow-dark.svg');
+          margin-right: 30px;
+          transform: rotate(-90deg);
+        }
+      }
+
+      &__getdate {
+        margin-top: 100px;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      .base-btn {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  img {
+    object-fit: cover;
+    max-width: 50%;
+    width: 100%;
+  }
+}
+
+.pics-container {
+  display: flex;
+  flex-wrap: wrap;
+  img {
+    object-fit: cover;
+    max-width: 33.33%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.pics-slider {
+  display: none;
+  width: 100%;
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0;
+    list-style-type: none;
+
+    li {
+      text-decoration: none;
+      box-sizing: content-box;
+      padding: 3px;
+
+      &.slick-active {
+        button {
+          background-color: black;
+        }
+      }
+
+      button {
+        display: block;
+        border: 1px solid black;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-indent: -9000px;
+        background-color: white;
+        outline: none;
+      }
+    }
+  }
+}
+
+.details-container {
+  flex-wrap: wrap;
+
+  &.another-type {
+    .column {
+      .feedback {
+        padding: 40px 25px;
+        background-image: none;
+
+        &__title {
+          color: black;
+        }
+
+        &__desc {
+          color: black;
+        }
+
+        &__form {
+          max-width: 100%;
+
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+            div {
+              background-color: #f1e4e0;
+              max-width: 420px;
+              width: 100%;
+              margin: 20px 28px;
+
+              input {
+                border-color: black;
+                color: #777777;
+
+                &::placeholder {
+                  color: #777777;
+                }
+              }
+
+              img {
+                filter: invert(1);
+              }
+            }
+          }
+
+          .base-btn {
+            border-color: black;
+            color: white;
+
+            &:hover {
+              color: black;
+            }
+
+            &::before {
+              background-color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .container {
+    .ground {
+      padding-top: 0;
+      border: 0;
+
+      &__element {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .base-btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 50px;
+          width: 128px;
+          padding: 2px 0;
+
+          &:hover {
+            img {
+              filter: invert(1);
+            }
+          }
+
+          img {
+            transform: rotate(-180deg);
+            width: 10px;
+            margin-left: 10px;
+            transition: filter .3s ease;
+          }
+        }
+
+        a {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.program-modal {
+  max-width: 960px;
+  max-height: 910px;
+  width: 100%;
+  height: 100%;
+  background-color: #ececec;
+  font-family: FuturaPT;
+  box-sizing: border-box;
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    font-weight: 600;
+    font-size: 33px;
+    margin-left: 40px;
+  }
+
+  &__duration {
+    color: #454545;
+    font-weight: 450;
+    font-size: 22px;
+    margin: 10px 0 50px 40px;
+  }
+
+  &__text {
+    display: flex;
+    color: #454545;
+    font-weight: 300;
+    font-size: 20px;
+    margin: 5px 0;
+    max-width: 600px;
+
+    span {
+      text-align: right;
+      display: inline-block;
+      color: black;
+      font-weight: 450;
+      margin-right: 18px;
+      min-width: 22px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 11px;
+    filter: invert(1);
+  }
+}
+
+.programs-slider {
+  display: none;
+  max-width: 425px;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+
+  .slick-track {
+    height: 100vh;
+  }
+
+  .program-modal {
+    display: block;
+    max-width: 100vw;
+    max-height: 100%;
+    outline: none;
+
+    &__title {
+      font-size: 5vw;
+    }
+
+    &__duration {
+      font-size: 4.06vw;
+      margin: 10px 0 25px 40px;
+    }
+
+    &__text {
+      font-size: 3.43vw;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .teacher-row {
+    flex-wrap: wrap;
+  }
+
+  .training-row {
+    flex-wrap: wrap-reverse;
+  }
+
+  .first-lesson-container {
+    flex-wrap: wrap;
+
+    .text {
+      text-align: center;
+      margin: 0 10px;
+    }
+
+    .base-btn {
+      margin: 15px 10px;
+    }
+  }
+
+  .details-container {
+    &.another-type {
+      .column {
+        .feedback {
+          &__form {
+            span {
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    background: linear-gradient(180deg, #848484 12.85%, #959595 24.16%, rgba(255, 255, 255, 0) 76.23%),
+      center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
+
+    .pages-title {
+      margin: 80px 5% 0 5%;
+      color: white;
+    }
+  }
+
+  .programs-container {
+    img {
+      display: none;
+    }
+
+    .info {
+      width: 100%;
+      padding: 20vw 10px;
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__title {
+          text-align: center;
+        }
+
+        &__element {
+          position: relative;
+          text-align: center;
+
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            left: 0;
+            bottom: -3px;
+            height: 2px;
+            background-color: black;
+          }
+        }
+
+        &__getdate {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .pics-container {
+    display: none;
+  }
+
+  .pics-slider {
+    display: block;
+  }
+
+  .details-container {
+    &.another-type {
+      .column {
+        .feedback {
+          background-image: url('/img/feedback-bg.png');
+
+          &__title {
+            color: white;
+          }
+
+          &__desc {
+            color: white;
+          }
+
+          &__form {
+            span {
+              div {
+                background-color: transparent;
+
+                input {
+                  border-color: white;
+                  color: #dcdcdc;
+
+                  &::placeholder {
+                    color: #dcdcdc;
+                  }
+                }
+
+                img {
+                  filter: invert(0);
+                }
+              }
+            }
+
+            .base-btn {
+              border-color: white;
+              color: black;
+
+              &:hover {
+                color: white;
+              }
+
+              &::before {
+                background-color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    .container {
+      .ground {
+        &__element {
+          .base-btn {
+            margin-right: 0;
+          }
+
+          a {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  header {
+    .pages-title {
+      &__name {
+        font-size: 5.62vh;
+      }
+
+      &__basic {
+        font-size: 5vh;
+        margin-top: 10px;
+      }
+
+      .base-btn {
+        margin-top: 30px;
+        max-width: 58.75vh;
+        padding: 0.93vh 0;
+        font-size: 2.5vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  header {
+    .pages-title {
+      &__name {
+        font-size: 5.62vw;
+      }
+
+      &__basic {
+        font-size: 5vw;
+        margin-top: 10px;
+      }
+
+      .base-btn {
+        margin-top: 30px;
+        max-width: 58.75vw;
+        padding: 0.93vw 0;
+        font-size: 2.5vw;
+      }
+    }
+  }
+
+  .about-us-container {
+    .title {
+      margin-top: 30px;
+    }
+
+    .blocks {
+      margin: 40px 0;
+
+      .block {
+        padding: 0 4.68vw;
+        height: 30.31vw;
+
+        &__title {
+          text-align: left;
+          font-size: 4.06vw;
+          margin-left: 4.68vw;
+          margin-top: 0;
+          margin-bottom: 5px;
+        }
+
+        .text {
+          font-size: 4.06vw;
+          margin-left: 4.68vw;
+        }
+
+        img {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .teacher-row,
+  .training-row {
+    padding: 50px 0;
+
+    .info {
+      .status {
+        font-size: 5vw;
+      }
+
+      .title {
+        font-size: 5.62vw;
+      }
+
+      .text {
+        font-size: 4.06vw;
+
+        img {
+          width: 2.40vw;
+          height: 5.31vw;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+  .first-lesson-container {
+    padding: 7.5vw 0;
+
+    .text {
+      font-size: 5vw;
+    }
+
+    .base-btn {
+      font-size: 2.5vw;
+      padding: 0.93vw 0;
+      max-width: 188px;
+    }
+  }
+
+  .programs-container {
+    .info {
+      .main {
+        &__title {
+          font-size: 5vw;
+          margin-bottom: 30px;
+        }
+
+        &__element {
+          display: none;
+          font-size: 4.06vw;
+          margin: 10px 0;
+
+          &.mobile {
+            display: block;
+          }
+        }
+
+        &__getdate {
+          font-size: 3.43vw;
+        }
+
+        .base-btn {
+          max-width: 188px;
+          padding: 0.93vw 0;
+          font-size: 2.5vw;
+        }
+      }
+    }
+  }
+
+  .details-container {
+    flex-wrap: wrap;
+
+    &.another-type {
+      .column {
+        .feedback {
+          &__form {
+            max-width: 192px;
+
+            span {
+              width: auto;
+
+              div {
+                margin: 10px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    padding-top: 20px;
+
+    .container {
+      .ground {
+        padding-bottom: 20px;
       }
     }
   }
