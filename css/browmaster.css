@@ -484,6 +484,7 @@ footer .container .ground__element a {
 }
 
 .program-modal__close {
+  cursor: pointer;
   position: absolute;
   top: 15px;
   right: 15px;
