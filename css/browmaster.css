@@ -1,15 +1,26 @@
-header {
+header.brow {
   background: center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
 }
 
+header.permakeup {
+  background: center top/cover url("/img/permakeup-header-bg.jpg") no-repeat;
+}
+
 header .nav_m {
-  background: #82847f;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 100px;
+}
+
+header .nav_m.brow {
+  background: #82847f;
+}
+
+header .nav_m.permakeup {
+  background: #1d1d1d;
 }
 
 header .nav .item {
@@ -73,6 +84,10 @@ header .pages-title .base-btn {
   background-color: #e1d4d0;
 }
 
+.about-us-container .blocks .block.filled.permakeup {
+  background-color: #bbbbc9;
+}
+
 .teacher-row,
 .training-row {
   display: -webkit-box;
@@ -89,6 +104,45 @@ header .pages-title .base-btn {
   font-family: FuturaPT;
   width: 100%;
   padding: 100px 0;
+}
+
+.teacher-row.permakeup,
+.training-row.permakeup {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0;
+}
+
+.teacher-row.permakeup .info,
+.training-row.permakeup .info {
+  padding: 100px 0;
+}
+
+.teacher-row.permakeup .pic,
+.training-row.permakeup .pic {
+  width: 50%;
+  margin: 0;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.teacher-row.permakeup .pic img,
+.training-row.permakeup .pic img {
+  display: block;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.teacher-row.reverse,
+.training-row.reverse {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .teacher-row .info,
@@ -198,6 +252,10 @@ header .pages-title .base-btn {
           align-items: center;
   width: 50%;
   padding: 20px 10px;
+}
+
+.programs-container .info .main {
+  max-width: 561px;
 }
 
 .programs-container .info .main__title {
@@ -339,6 +397,10 @@ header .pages-title .base-btn {
   margin: 20px 28px;
 }
 
+.details-container.another-type .column .feedback__form span div.permakeup {
+  background-color: #bbbbc9;
+}
+
 .details-container.another-type .column .feedback__form span div input {
   border-color: black;
   color: #777777;
@@ -450,6 +512,23 @@ footer .container .ground__element a {
           justify-content: center;
 }
 
+.program-modal .container {
+  overflow: auto;
+  padding: 10px 72px;
+}
+
+.program-modal .container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.program-modal .container::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.program-modal .container::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
 .program-modal__title {
   font-weight: 600;
   font-size: 33px;
@@ -505,6 +584,14 @@ footer .container .ground__element a {
   height: 100vh;
 }
 
+.programs-slider .container {
+  overflow-y: auto;
+  padding: 10px 16px;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .programs-slider .program-modal {
   display: block;
   max-width: 100vw;
@@ -530,6 +617,26 @@ footer .container .ground__element a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .teacher-row.permakeup, .teacher-row.reverse {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .teacher-row.permakeup .pic, .teacher-row.reverse .pic {
+    width: auto;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0 25px 30px 25px;
+  }
+  .teacher-row.permakeup .pic img, .teacher-row.reverse .pic img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .teacher-row.reverse {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
   .training-row {
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
@@ -552,9 +659,13 @@ footer .container .ground__element a {
 }
 
 @media (max-width: 900px) {
-  header {
+  header.brow {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(12.85%, #848484), color-stop(24.16%, #959595), color-stop(76.23%, rgba(255, 255, 255, 0))), center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
     background: linear-gradient(180deg, #848484 12.85%, #959595 24.16%, rgba(255, 255, 255, 0) 76.23%), center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
+  }
+  header.permakeup {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(6.34%, rgba(0, 0, 0, 0.97)), color-stop(17.03%, rgba(34, 25, 28, 0.94)), color-stop(76.67%, rgba(130, 130, 130, 0))), center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.97) 6.34%, rgba(34, 25, 28, 0.94) 17.03%, rgba(130, 130, 130, 0) 76.67%), center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
   }
   header .pages-title {
     margin: 80px 5% 0 5%;
@@ -617,6 +728,9 @@ footer .container .ground__element a {
     color: white;
   }
   .details-container.another-type .column .feedback__form span div {
+    background-color: transparent;
+  }
+  .details-container.another-type .column .feedback__form span div.permakeup {
     background-color: transparent;
   }
   .details-container.another-type .column .feedback__form span div input {
@@ -714,6 +828,16 @@ footer .container .ground__element a {
   .teacher-row,
   .training-row {
     padding: 50px 0;
+  }
+  .teacher-row.permakeup .info, .teacher-row.reverse .info,
+  .training-row.permakeup .info,
+  .training-row.reverse .info {
+    padding: 50px 0 10px 0;
+  }
+  .teacher-row.permakeup .pic, .teacher-row.reverse .pic,
+  .training-row.permakeup .pic,
+  .training-row.reverse .pic {
+    margin: 0 6.30vw 30px 6.30vw;
   }
   .teacher-row .info .status,
   .training-row .info .status {

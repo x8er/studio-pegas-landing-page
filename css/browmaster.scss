@@ -1,12 +1,25 @@
 header {
-  background: center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
+  &.brow {
+    background: center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
+  }
+
+  &.permakeup {
+    background: center top/cover url("/img/permakeup-header-bg.jpg") no-repeat;
+  }
 
   .nav {
     &_m {
-      background: #82847f;
       justify-content: flex-start;
       box-sizing: border-box;
       padding-top: 100px;
+
+      &.brow {
+        background: #82847f;
+      }
+
+      &.permakeup {
+        background: #1d1d1d;
+      }
     }
 
     .item {
@@ -69,6 +82,10 @@ header {
 
       &.filled {
         background-color: #e1d4d0;
+
+        &.permakeup {
+          background-color: #bbbbc9;
+        }
       }
     }
   }
@@ -84,6 +101,33 @@ header {
   font-family: FuturaPT;
   width: 100%;
   padding: 100px 0;
+
+  &.permakeup {
+    justify-content: flex-end;
+    padding: 0;
+
+    .info {
+      padding: 100px 0;
+    }
+
+    .pic {
+      width: 50%;
+      margin: 0;
+      align-self: stretch;
+
+      img {
+        display: block;
+        max-width: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &.reverse {
+    justify-content: flex-start;
+  }
 
   .info {
     max-width: 411px;
@@ -174,6 +218,8 @@ header {
     padding: 20px 10px;
 
     .main {
+      max-width: 561px;
+
       &__title {
         font-weight: 600;
         font-size: 33px;
@@ -296,6 +342,10 @@ header {
               width: 100%;
               margin: 20px 28px;
 
+              &.permakeup {
+                background-color: #bbbbc9;
+              }
+
               input {
                 border-color: black;
                 color: #777777;
@@ -383,6 +433,23 @@ footer {
   flex-direction: column;
   justify-content: center;
 
+  .container {
+    overflow: auto;
+    padding: 10px 72px;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+
+      &-track {
+        background-color: white;
+      }
+
+      &-thumb {
+        background-color: black;
+      }
+    }
+  }
+
   &__title {
     font-weight: 600;
     font-size: 33px;
@@ -435,6 +502,13 @@ footer {
     height: 100vh;
   }
 
+  .container {
+    overflow-y: auto;
+    padding: 10px 16px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
   .program-modal {
     display: block;
     max-width: 100vw;
@@ -459,6 +533,25 @@ footer {
 @media (max-width: 1024px) {
   .teacher-row {
     flex-wrap: wrap;
+
+    &.permakeup,
+    &.reverse {
+      justify-content: center;
+
+      .pic {
+        width: auto;
+        align-self: center;
+        margin: 0 25px 30px 25px;
+
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+
+    &.reverse {
+      flex-wrap: wrap-reverse;
+    }
   }
 
   .training-row {
@@ -495,8 +588,20 @@ footer {
 
 @media (max-width: 900px) {
   header {
-    background: linear-gradient(180deg, #848484 12.85%, #959595 24.16%, rgba(255, 255, 255, 0) 76.23%),
-      center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
+    &.brow {
+      background: linear-gradient(180deg, #848484 12.85%, #959595 24.16%, rgba(255, 255, 255, 0) 76.23%),
+        center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
+    }
+
+    &.permakeup {
+      background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.97) 6.34%,
+          rgba(34, 25, 28, 0.94) 17.03%,
+          rgba(130, 130, 130, 0) 76.67%
+        ),
+        center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
+    }
 
     .pages-title {
       margin: 80px 5% 0 5%;
@@ -574,6 +679,10 @@ footer {
             span {
               div {
                 background-color: transparent;
+
+                &.permakeup {
+                  background-color: transparent;
+                }
 
                 input {
                   border-color: white;
@@ -703,6 +812,17 @@ footer {
   .teacher-row,
   .training-row {
     padding: 50px 0;
+
+    &.permakeup,
+    &.reverse {
+      .info {
+        padding: 50px 0 10px 0;
+      }
+
+      .pic {
+        margin: 0 6.30vw 30px 6.30vw;
+      }
+    }
 
     .info {
       .status {

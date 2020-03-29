@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="brow">
     <!-- Mobile pos logo and burgerBtn -->
     <img src="ico/logo.png" class="logo_m">
     <img src="ico/menu.svg" id="burgerBtn">
@@ -38,7 +38,7 @@
       <div class="base-btn invert">бесплатная консультация</div>
     </div>
     <!-- Mobile navigation -->
-    <div class="nav_m">
+    <div class="nav_m brow">
       <img src="ico/close.svg">
       <div class="item goToAboutUs">о тренере</div>
       <div class="item goToPrograms">программы обучения</div>
@@ -326,7 +326,7 @@
       <img src="ico/close.svg" style="background-color: #382829; filter: invert(1);">
     </div>
     <div class="program-modal" id="program-1">
-      <div style="overflow: auto; padding: 10px 72px;">
+      <div class="container">
         <div class="program-modal__title">Программа</div>
         <div class="program-modal__title">«Сам себе бровист»</div>
         <div class="program-modal__duration">Длительность курса: 5 часов</div>
@@ -344,7 +344,7 @@
       <img src="ico/close.svg" class="program-modal__close">
     </div>
     <div class="program-modal" id="program-2">
-      <div style="overflow: auto; padding: 10px 72px;">
+      <div class="container">
         <div class="program-modal__title">Программа Standart</div>
         <div class="program-modal__duration">Длительность курса: 15 часов</div>
         <div class="program-modal__text"><span>1</span>Инструменты и материалы для работы. Их хранение. Составление
@@ -372,7 +372,7 @@
       <img src="ico/close.svg" class="program-modal__close">
     </div>
     <div class="program-modal" id="program-3">
-      <div style="overflow: auto; padding: 10px 72px;">
+      <div class="container">
         <div class="program-modal__title">Программа Standart+</div>
         <div class="program-modal__duration">Длительность курса: 17 часов</div>
         <div class="program-modal__text"><span></span>Включает в себя полную программу Standart и еще дополнительно две
@@ -384,7 +384,7 @@
       <img src="ico/close.svg" class="program-modal__close">
     </div>
     <div class="program-modal" id="program-4">
-      <div style="overflow: auto; padding: 10px 72px;">
+      <div class="container">
         <div class="program-modal__title">Программа Эксклюзив</div>
         <div class="program-modal__duration">Длительность курса: 19 часов</div>
         <div class="program-modal__text"><span>1</span>Инструменты и материалы для работы. Их хранение. Составление
@@ -418,7 +418,7 @@
       <img src="ico/close.svg" class="program-modal__close">
     </div>
     <div class="program-modal" id="program-5">
-      <div style="overflow: auto; padding: 10px 72px;">
+      <div class="container">
         <div class="program-modal__title">Программа для практикующих мастеров</div>
         <div class="program-modal__duration">Разбор ошибок практикующего мастера.</div>
         <div class="program-modal__text"><span>1</span>Разбор ошибок и предложение решений.</div>
@@ -429,7 +429,7 @@
     </div>
     <div class="programs-slider">
       <div class="program-modal" id="program-1">
-        <div style="overflow-y: auto; padding: 10px 16px; height: 100%; box-sizing: border-box;">
+        <div class="container">
           <div class="program-modal__title">Программа «Сам себе бровист»</div>
           <div class="program-modal__duration">Длительность курса: 5 часов</div>
           <div class="program-modal__text"><span>1</span>Материалы и инструменты – стартовый домашний набор.</div>
@@ -446,7 +446,7 @@
         <img src="ico/close.svg" class="program-modal__close">
       </div>
       <div class="program-modal" id="program-2">
-        <div style="overflow-y: auto; padding: 10px 16px; height: 100%; box-sizing: border-box;">
+        <div class="container">
           <div class="program-modal__title">Программа Standart</div>
           <div class="program-modal__duration">Длительность курса: 15 часов</div>
           <div class="program-modal__text"><span>1</span>Инструменты и материалы для работы. Их хранение. Составление
@@ -475,7 +475,7 @@
         <img src="ico/close.svg" class="program-modal__close">
       </div>
       <div class="program-modal" id="program-3">
-        <div style="overflow-y: auto; padding: 10px 16px; height: 100%; box-sizing: border-box;">
+        <div class="container">
           <div class="program-modal__title">Программа Standart+</div>
           <div class="program-modal__duration">Длительность курса: 17 часов</div>
           <div class="program-modal__text"><span></span>Включает в себя полную программу Standart и еще дополнительно
@@ -489,7 +489,7 @@
         <img src="ico/close.svg" class="program-modal__close">
       </div>
       <div class="program-modal" id="program-4">
-        <div style="overflow-y: auto; padding: 10px 16px; height: 100%; box-sizing: border-box;">
+        <div class="container">
           <div class="program-modal__title">Программа Эксклюзив</div>
           <div class="program-modal__duration">Длительность курса: 19 часов</div>
           <div class="program-modal__text"><span>1</span>Инструменты и материалы для работы. Их хранение. Составление
@@ -525,7 +525,7 @@
         <img src="ico/close.svg" class="program-modal__close">
       </div>
       <div class="program-modal" id="program-5">
-        <div style="overflow-y: auto; padding: 10px 16px; height: 100%; box-sizing: border-box;">
+        <div class="container">
           <div class="program-modal__title">Программа для практикующих мастеров</div>
           <div class="program-modal__duration">Разбор ошибок практикующего мастера.</div>
           <div class="program-modal__text"><span>1</span>Разбор ошибок и предложение решений.</div>
@@ -540,7 +540,7 @@
   <script src="slick/slick.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=6c9f79df-247e-45c2-86fb-6a04085d4ebd&lang=ru_RU"
     type="text/javascript"></script>
-  <script src="js/script-browmaster.js"></script>
+  <script src="js/script-training.js"></script>
 </body>
 
 </html>

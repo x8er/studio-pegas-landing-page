@@ -76,6 +76,8 @@ $('.blackout').on('click', function (e) {
     $('#program-3').css('display', 'none');
     $('#program-4').css('display', 'none');
     $('#program-5').css('display', 'none');
+    $('#perMakeupProgram-1').css('display', 'none');
+    $('#perMakeupProgram-2').css('display', 'none');
   }
 });
 // same like a click on .blackout
@@ -107,6 +109,24 @@ for (let i = 1; i < 6; i++) {
 // openProgramMobile-1-5
 for (let i = 1; i < 6; i++) {
   $(`#openProgramMobile-${i}`).on('click', function () {
+    $('body').css('overflow', 'hidden');
+    $('.blackout').css('display', 'flex');
+    $(`.programs-slider`).css('display', 'block');
+    $(`.programs-slider`).slick('slickGoTo', i-1, true);
+  });
+}
+
+// perMakeupOpenProgram-1-2
+for (let i = 1; i < 3; i++) {
+  $(`#perMakeupOpenProgram-${i}`).on('click', function () {
+    $('body').css('overflow', 'hidden');
+    $('.blackout').css('display', 'flex');
+    $(`#perMakeupProgram-${i}`).css('display', 'flex');
+  });
+}
+// perMakeupOpenProgramMobile-1-2
+for (let i = 1; i < 3; i++) {
+  $(`#perMakeupOpenProgramMobile-${i}`).on('click', function () {
     $('body').css('overflow', 'hidden');
     $('.blackout').css('display', 'flex');
     $(`.programs-slider`).css('display', 'block');
