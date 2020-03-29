@@ -515,6 +515,8 @@ footer .container .ground__element a {
 .program-modal .container {
   overflow: auto;
   padding: 10px 72px;
+  scrollbar-width: thin;
+  scrollbar-color: black white;
 }
 
 .program-modal .container::-webkit-scrollbar {

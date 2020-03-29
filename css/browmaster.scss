@@ -436,6 +436,8 @@ footer {
   .container {
     overflow: auto;
     padding: 10px 72px;
+    scrollbar-width: thin;
+    scrollbar-color: black white;
 
     &::-webkit-scrollbar {
       width: 4px;
