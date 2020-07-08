@@ -63,6 +63,20 @@
       }
     }
   }
+
+  .details-container {
+    &.another-type {
+      .column {
+        .feedback {
+          &__form {
+            .base-btn {
+              max-width: 420px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 900px) {
@@ -72,6 +86,10 @@
 
       .inputs {
         margin: 10px 0;
+      }
+
+      .buttons {
+        margin-top: 0;
       }
     }
   }
@@ -94,6 +112,14 @@
     .sub {
       font-size: 1.2rem;
       margin-bottom: 20px;
+    }
+  }
+
+  .about-us-container {
+    .blocks {
+      .block:hover {
+        margin: 25px;
+      }
     }
   }
 
@@ -154,6 +180,7 @@
       }
     }
   }
+
 }
 
 @media (max-width: 900px) and (orientation: landscape) {
@@ -254,11 +281,15 @@
     .blocks {
       .block {
         flex-direction: row;
-        height: 70px;
+        height: 97px;
         width: 100%;
         max-width: 340px;
         padding: 5px;
         margin: 7px 0;
+
+        &:hover {
+          margin: 7px 0;
+        }
 
         img {
           width: 37px;
@@ -321,7 +352,7 @@
           }
 
           &::before {
-            content: url('/icons/cube.svg');
+            content: url('/ico/cube.svg');
             margin-right: 5px;
             transform: scale(.8);
           }
@@ -334,10 +365,9 @@
         }
 
         .base-btn {
-          max-width: 188px;
+          max-width: none;
           font-size: 2.5vw;
-          padding: 4px 0;
-          margin-left: 14px;
+          padding: 2px 0;
         }
       }
     }
@@ -377,9 +407,9 @@
 
           .base-btn {
             max-width: 189px;
-            padding: 3px 0;
+            padding: 2px 0;
             font-size: 2.5vw;
-            margin: 95px auto 0 auto;
+            margin: 60px auto 0 auto;
           }
         }
       }
@@ -391,15 +421,16 @@
       .stable {
         &__main {
           .text {
-            font-size: 4.37vw;
+            font-size: 5vw;
           }
 
           .inst-btn {
             font-size: 3.12vw;
-            padding: 5px 35px;
+            padding: 5px 25px;
+            border-radius: 3px;
 
             img {
-              width: 3.12vw;
+              width: 4.68vw;
             }
           }
         }
@@ -437,13 +468,21 @@
           }
         }
       }
+
+      &__to-left {
+        transform: translateY(-50%) scale(.5);
+      }
+
+      &__to-right {
+        transform: translateY(-50%) rotate(180deg) scale(.5);
+      }
     }
 
     .base-btn {
       margin-top: 20px;
-      max-width: 58.75vw;
-      padding: 1.25vw 0;
-      font-size: 2.5vw;
+      max-width: 85.93vw;
+      padding: 2px 0;
+      font-size: 3.75vw;
     }
   }
 
@@ -495,23 +534,23 @@
           margin: 20px 20px 0 20px;
 
           div {
-            max-width: 190px;
+            max-width: 275px;
             margin: 10px 0;
 
             input {
-              font-size: 3.12vw;
-              padding: 8px 60px 8px 20px;
+              font-size: 4.37vw;
+              padding: 6px 60px 6px 20px;
             }
 
             img {
-              width: 2.5vw;
+              width: 3.12vw;
             }
           }
 
           .base-btn {
-            max-width: 190px;
-            font-size: 2.5vw;
-            padding: 4px 0;
+            box-sizing: border-box;
+            font-size: 3.75vw;
+            padding: 2px 0;
             margin-top: 15px;
           }
         }
@@ -538,16 +577,19 @@
             width: 43.75vw;
 
             &__title {
-              font-size: 3.43vw;
+              font-size: 4vw;
+              margin-bottom: 10px;
             }
 
             &__element {
-              font-size: 2.81vw;
+              font-size: 4.3vw;
             }
 
             .base-btn {
-              max-width: 23.12vw;
-              padding: 0.93vw 0;
+              max-width: 25vw;
+              font-size: 12px;
+              right: 15px;
+              bottom: 0;
 
               img {
                 width: 10px;

@@ -9,9 +9,74 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" href="aos/aos.css" />
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/browmaster.css">
+  <link rel="stylesheet" href="css/media.css">
+
+  <!-- Begin Talk-Me {literal} -->
+  <script type='text/javascript'>
+    (function(d, w, m) {
+      window.supportAPIMethod = m;
+      var s = d.createElement('script');
+      s.type ='text/javascript'; s.id = 'supportScript'; s.charset = 'utf-8';
+      s.async = true;
+      var id = 'a9042a4f06e9df0dfd0fa0c840a9da08';
+      s.src = 'https://lcab.talk-me.ru/support/support.js?h='+id;
+      var sc = d.getElementsByTagName('script')[0];
+      w[m] = w[m] || function() { (w[m].q = w[m].q || []).push(arguments); };
+      if (sc) sc.parentNode.insertBefore(s, sc); 
+      else d.documentElement.firstChild.appendChild(s);
+    })(document, window, 'TalkMe');
+  </script>
+  <!-- {/literal} End Talk-Me -->
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(62594440, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true,
+          webvisor:true,
+          ecommerce:"dataLayer"
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/62594440" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
+  <!-- Google Tag Manager -->
+
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+  })(window,document,'script','dataLayer','GTM-WMLXC9J');</script>
+
+  <!-- End Google Tag Manager -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165013167-1"></script>
+
+  <script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-165013167-1');
+
+  </script>
 </head>
 
 <body>
@@ -34,8 +99,8 @@
     </div>
     <div class="pages-title">
       <div class="pages-title__name">Авторский курс по моделированию и восстановлению формы бровей</div>
-      <div class="pages-title__basic">Обучение от практикующего мастера — Юлианы Лукашевич</div>
-      <div class="base-btn invert">бесплатная консультация</div>
+      <div class="pages-title__basic write-effect">Обучение от практикующего мастера — Юлианы Лукашевич</div>
+      <div id="showFreeConsultation" class="base-btn invert">бесплатная консультация</div>
     </div>
     <!-- Mobile navigation -->
     <div class="nav_m brow">
@@ -98,14 +163,14 @@
   <div class="teacher-row">
     <div class="info">
       <div class="status">Основатель школы и преподаватель</div>
-      <div class="title">Юлиана Лукашевич</div>
-      <div class="text">Одна из первых мастеров-бровистов, успешно практикующая и развивающая направление по
+      <div id="firstTrainer" class="title">Юлиана Лукашевич</div>
+      <div data-aos="zoom-in" data-aos-anchor="#firstTrainer" class="text">Одна из первых мастеров-бровистов, успешно практикующая и развивающая направление по
         восстановлению и моделированию формы бровей, создала свою авторскую методику, которую сейчас продвигаю в массы.
       </div>
-      <div class="text">Профессиональный практический опыт больше 13 лет. Среди которых, профессиональная реализация - в
+      <div data-aos="zoom-in" data-aos-delay="200" data-aos-anchor="#firstTrainer" class="text">Профессиональный практический опыт больше 13 лет. Среди которых, профессиональная реализация - в
         продюсерских центрах, сфере телевидения, Национальном Академическом театре оперы и балета, и модных показах.
       </div>
-      <div class="text">Помимо своей авторской методики, проходила индивидуальные обучения у лучших практикующих
+      <div data-aos="zoom-in" data-aos-delay="400" data-aos-anchor="#firstTrainer" class="text">Помимо своей авторской методики, проходила индивидуальные обучения у лучших практикующих
         профессионалов Москвы и Санкт-Петербурга. Благодаря данному опыту, предоставляемые вам знания всегда будут
         самыми качественными, актуальными и лучшими!</div>
     </div>
@@ -118,15 +183,15 @@
       <img src="img/browmaster2.png">
     </div>
     <div class="info">
-      <div class="title">Что вы получите пройдя обучение в Studia Pegas</div>
-      <div class="text"><img src="/ico/done.svg">Знания и практические навыки</div>
-      <div class="text"><img src="/ico/done.svg">Официальные документы + сертификат (на русском и английском языках)
+      <div id="afterTraining" class="title">Что вы получите пройдя обучение в Studia Pegas</div>
+      <div data-aos="zoom-in" data-aos-anchor="#afterTraining" class="text"><img src="/ico/done.svg">Знания и практические навыки</div>
+      <div data-aos="zoom-in" data-aos-delay="100" data-aos-anchor="#afterTraining" class="text"><img src="/ico/done.svg">Официальные документы + сертификат (на русском и английском языках)
       </div>
-      <div class="text"><img src="/ico/done.svg">Методическое пособие</div>
-      <div class="text"><img src="/ico/done.svg">Портфолио работ</div>
-      <div class="text"><img src="/ico/done.svg">50% скидка на МК студии (всех направлений)</div>
-      <div class="text"><img src="/ico/done.svg">Скидка на приобретение материала</div>
-      <div class="text"><img src="/ico/done.svg">Помощь и консультацию в подготовке к конкурсам</div>
+      <div data-aos="zoom-in" data-aos-delay="200" data-aos-anchor="#afterTraining" class="text"><img src="/ico/done.svg">Методическое пособие</div>
+      <div data-aos="zoom-in" data-aos-delay="300" data-aos-anchor="#afterTraining" class="text"><img src="/ico/done.svg">Портфолио работ</div>
+      <div data-aos="zoom-in" data-aos-delay="400" data-aos-anchor="#afterTraining" class="text"><img src="/ico/done.svg">50% скидка на МК студии (всех направлений)</div>
+      <div data-aos="zoom-in" data-aos-delay="500" data-aos-anchor="#afterTraining" class="text"><img src="/ico/done.svg">Скидка на приобретение материала</div>
+      <div data-aos="zoom-in" data-aos-delay="600" data-aos-anchor="#afterTraining" class="text"><img src="/ico/done.svg">Помощь и консультацию в подготовке к конкурсам</div>
     </div>
   </div>
   <div class="first-lesson-container">
@@ -152,6 +217,110 @@
       </div>
     </div>
     <img src="img/programs1.jpg">
+    <div class="desc">
+      <div class="program-modal" id="program-1">
+        <div class="container">
+          <div class="program-modal__title">Программа</div>
+          <div class="program-modal__title">«Сам себе бровист»</div>
+          <div class="program-modal__duration">Длительность курса: 5 часов</div>
+          <div class="program-modal__text"><span>1</span>Материалы и инструменты – стартовый домашний набор.</div>
+          <div class="program-modal__text"><span>2</span>Дезинфекция инструмента.</div>
+          <div class="program-modal__text"><span>3</span>Колористика. Разбор цветотипа внешности. Подбор красителей и
+            пропорции смешивания
+            “Для себя”.</div>
+          <div class="program-modal__text"><span>4</span>Правильная подготовка бровей. Построение эскиза (паста, нить,
+            карандаш).</div>
+          <div class="program-modal__text"><span>5</span>Моделирование формы пинцетом.</div>
+          <div class="program-modal__text"><span>6</span>Работа с поврежденными бровями.</div>
+          <div class="program-modal__text"><span>7</span>Make-up бровей.</div>
+        </div>
+        <img src="ico/close.svg" class="program-modal__close">
+      </div>
+      <div class="program-modal" id="program-2">
+        <div class="container">
+          <div class="program-modal__title">Программа Standart</div>
+          <div class="program-modal__duration">Длительность курса: 15 часов</div>
+          <div class="program-modal__text"><span>1</span>Инструменты и материалы для работы. Их хранение. Составление
+            стартового набора.</div>
+          <div class="program-modal__text"><span>2</span>Оборудование рабочего места, согласно СанПИНа РБ. Дезинфекция
+            инструмента и рабочего места.</div>
+          <div class="program-modal__text"><span>3</span>Физиогномика – базовые знания для создния индивидуальной формы
+            бровей. Построение эскиза бровей (работа с Brow-пастой, нитью, карандашом). Метод построения эскиза за 5
+            минут.
+          </div>
+          <div class="program-modal__text"><span>4</span>Методы построения мужской, подростковой и женской формы бровей.
+          </div>
+          <div class="program-modal__text"><span>5</span>Стрижка бровей – за либо против?</div>
+          <div class="program-modal__text"><span>6</span>Работа с проблемными бровями (перещипанными, нерастущими с
+            детства
+            и другими сложными ситуациями).</div>
+          <div class="program-modal__text"><span>7</span>Колористика. Разбор топовых полуперманентных красителей СНГ –
+            крем-красок, гель-красок. Разбор формул пропорций смешивания.</div>
+          <div class="program-modal__text"><span>8</span>Пошаговый алгоритм работы.</div>
+          <div class="program-modal__text"><span>9</span>Работа с градиентами. Правила создания плавных градиентов.</div>
+          <div class="program-modal__text"><span>10</span>Полуперманентное окрашивание ресниц. Особенности проведения
+            процедуры.</div>
+          <div class="program-modal__text"><span>11</span>Правила и этика работы с клиентом.</div>
+        </div>
+        <img src="ico/close.svg" class="program-modal__close">
+      </div>
+      <div class="program-modal" id="program-3">
+        <div class="container">
+          <div class="program-modal__title">Программа Standart+</div>
+          <div class="program-modal__duration">Длительность курса: 17 часов</div>
+          <div class="program-modal__text"><span></span>Включает в себя полную программу Standart и еще дополнительно две
+            темы:</div>
+          <div class="program-modal__text"><span>1</span>Осветление бровей.</div>
+          <div class="program-modal__text"><span>2</span>Долговременная укладка бровей (ламинирование). Техника проведения
+            процедуры. Для кого противопоказана.</div>
+        </div>
+        <img src="ico/close.svg" class="program-modal__close">
+      </div>
+      <div class="program-modal" id="program-4">
+        <div class="container">
+          <div class="program-modal__title">Программа Эксклюзив</div>
+          <div class="program-modal__duration">Длительность курса: 19 часов</div>
+          <div class="program-modal__text"><span>1</span>Инструменты и материалы для работы. Их хранение. Составление
+            стартового набора.</div>
+          <div class="program-modal__text"><span>2</span>Оборудование рабочего места, согласно СанПИНа РБ. Дезинфекция
+            инструмента и рабочего места.</div>
+          <div class="program-modal__text"><span>3</span>Физиогномика – базовые знания для создния индивидуальной формы
+            бровей. Построение эскиза бровей (работа с Brow-пастой, нитью, карандашом). Метод построения эскиза за 5
+            минут.
+          </div>
+          <div class="program-modal__text"><span>4</span>Методы построения мужской, подростковой и женской формы бровей.
+          </div>
+          <div class="program-modal__text"><span>5</span>Стрижка бровей – за либо против?</div>
+          <div class="program-modal__text"><span>6</span>Работа с проблемными бровями (перещипанными, нерастущими с
+            детства
+            и другими сложными ситуациями).</div>
+          <div class="program-modal__text"><span>7</span>Осветление бровей.</div>
+          <div class="program-modal__text"><span>8</span>Колористика. Разбор топовых полуперманентных красителей СНГ –
+            крем-красок, гель-красок. Разбор формул пропорций смешивания.</div>
+          <div class="program-modal__text"><span>9</span>Пошаговый алгоритм работы.</div>
+          <div class="program-modal__text"><span>10</span>Работа с градиентами. Правила создания плавных градиентов.</div>
+          <div class="program-modal__text"><span>11</span>Полуперманентное окрашивание ресниц. Особенности проведения
+            процедуры.</div>
+          <div class="program-modal__text"><span>12</span>Долговременная укладка бровей (ламинирование). Техника
+            проведения
+            процедуры. Противопоказания.</div>
+          <div class="program-modal__text"><span>13</span>Горячий воск (плёночный воск). Алгоритм работы. Постановка руки.
+          </div>
+          <div class="program-modal__text"><span>14</span>Правила и этика работы с клиентом.</div>
+        </div>
+        <img src="ico/close.svg" class="program-modal__close">
+      </div>
+      <div class="program-modal" id="program-5">
+        <div class="container">
+          <div class="program-modal__title">Программа для практикующих мастеров</div>
+          <div class="program-modal__duration">Разбор ошибок практикующего мастера.</div>
+          <div class="program-modal__text"><span>1</span>Разбор ошибок и предложение решений.</div>
+          <div class="program-modal__text"><span>2</span>Конкретные советы, как добиться идеальной работы.</div>
+          <div class="program-modal__text"><span>3</span>Отработка на моделях.</div>
+        </div>
+        <img src="ico/close.svg" class="program-modal__close">
+      </div>
+    </div>
   </div>
   <div class="reviews-container hereReviews">
     <div class="reviews">
@@ -163,12 +332,22 @@
             <img src="ico/quotes-black.svg" class="content__quotes"
               style="filter: invert(94%) sepia(5%) saturate(412%) hue-rotate(326deg) brightness(89%) contrast(98%);">
             <div class="content__text">
-              Проходила обучение на курсах по моделированию бровей с восстановлением у Юлианы. Узнала много нового и
-              интересного, много тонкостей и нюансов, о которых даже не догадывалась. Полученные знания применяю для
-              себя и близких знакомых. Все в восторге! Юлиана не только профессионал своего дела, но и добрая,
-              внимательная и отзывчивая девушка! Спасибо Юлиана за ценный опыт! Полученные знания применяю для себя
-              и
-              близких знакомых. Все в восторге! Юлиана не только профессионал своего дела, но и добрая!!!!!
+              Спасибо Юлиане за терпение, улыбки и творческий подход. Приятно, познавательно с таким замечательным преподавателем. Супер специалист своего дела, приятный человек, что еще нужно для учеников) Девочкам желаю только лучших результатов, а студии в целом процветания.
+            </div>
+            <div class="content__data">
+              <div class="author">Александра</div>
+              <div class="date">18.01.2020</div>
+            </div>
+          </div>
+        </div>
+        <div class="reviews-slider__item">
+          <div class="bg-block" style="background-color: #E1D4D0; top: 0; left: 0;"></div>
+          <div class="bg-block" style="background-color: #393939; right: 0; bottom: 0;"></div>
+          <div class="content">
+            <img src="ico/quotes-black.svg" class="content__quotes"
+              style="filter: invert(94%) sepia(5%) saturate(412%) hue-rotate(326deg) brightness(89%) contrast(98%);">
+            <div class="content__text">
+              Проходила обучение на курсах по моделированию бровей с восстановлением у Юлианы. Узнала много нового и интересного, много тонкостей и нюансов, о которых даже не догадывалась. Полученные знания применяю для себя и близких знакомых. Все в восторге! Юлиана не только профессионал своего дела, но и добрая, внимательная и отзывчивая девушка! Спасибо Юлиана за ценный опыт!
             </div>
             <div class="content__data">
               <div class="author">Александра</div>
@@ -183,49 +362,41 @@
             <img src="ico/quotes-black.svg" class="content__quotes"
               style="filter: invert(94%) sepia(5%) saturate(412%) hue-rotate(326deg) brightness(89%) contrast(98%);">
             <div class="content__text">
-              Я в восторге от работы, результат просто превзошел все мои ожидания, я безумно безумно рада что
-              решилась,
-              мне очень нравится не могу налюбоваться на свои красивые бровки) даже не верится что они тепер у меня
-              есть
+              Очень все понравилось, постепенно применяю полученные знания на практике. Ваш курс нашла в Инстаграме случайно. Выбор курсов сейчас большой, но остановилась на Вашем потому что, обучение в 3 дня и занятия были через день, маленькие группы и преподаватель с большим опытом
             </div>
             <div class="content__data">
-              <div class="author">Александра</div>
-              <div class="date">21.01.2020</div>
-            </div>
-          </div>
-        </div>
-        <div class="reviews-slider__item">
-          <div class="bg-block" style="background-color: #E1D4D0; top: 0; left: 0;"></div>
-          <div class="bg-block" style="background-color: #393939; right: 0; bottom: 0;"></div>
-          <div class="content">
-            <img src="ico/quotes-black.svg" class="content__quotes"
-              style="filter: invert(94%) sepia(5%) saturate(412%) hue-rotate(326deg) brightness(89%) contrast(98%);">
-            <div class="content__text">
-              Очень все понравилось, постепенно применяю полученные знания на практике. Ваш курс нашла в Инстаграме
-              случайно. Выбор курсов сейчас большой, но остановилась на Вашем потому что, обучение в 3 дня и занятия
-              были через день, маленькие группы и преподаватель с большим опытом
-            </div>
-            <div class="content__data">
-              <div class="author">Александра</div>
-              <div class="date">15.02.2020</div>
+              <div class="author">Елена</div>
+              <div class="date">12.01.2020</div>
             </div>
           </div>
         </div>
       </div>
       <div class="reviews__left-blur"></div>
       <div class="reviews__right-blur"></div>
-      <img src="ico/arrow-dark.svg" class="reviews__to-left">
-      <img src="ico/arrow-dark.svg" class="reviews__to-right">
+      <img src="ico/arrow-dark-review.svg" class="reviews__to-left">
+      <img src="ico/arrow-dark-review.svg" class="reviews__to-right">
     </div>
     <div class="base-btn" id="showReviewModal">оставить отзыв</div>
   </div>
   <div class="pics-container">
-    <img src="/img/pics-container-1.jpg">
-    <img src="/img/pics-container-2.jpg">
-    <img src="/img/pics-container-3.jpg">
-    <img src="/img/pics-container-4.jpg">
-    <img src="/img/pics-container-5.jpg">
-    <img src="/img/pics-container-6.jpg">
+    <div>
+      <img src="/img/pics-container-1.jpg">
+    </div>
+    <div>
+      <img src="/img/pics-container-2.jpg">
+    </div>
+    <div>
+      <img src="/img/pics-container-3.jpg">
+    </div>
+    <div>
+      <img src="/img/pics-container-4.jpg">
+    </div>
+    <div>
+      <img src="/img/pics-container-5.jpg">
+    </div>
+    <div>
+      <img src="/img/pics-container-6.jpg">
+    </div>
   </div>
   <div class="pics-slider">
     <img src="/img/pics-container-1.jpg">
@@ -265,11 +436,11 @@
       <div class="contacts hereContacts">
         <div class="contacts__title">контакты</div>
         <div class="contacts__subtitle s-clock">Время работы:</div>
-        <div class="contacts__text">10:00-22:00 БЕЗ ВЫХОДНЫХ</div>
+        <div data-aos="zoom-in" data-aos-offset="50" data-aos-anchor=".hereContacts" class="contacts__text">10:00-22:00 БЕЗ ВЫХОДНЫХ</div>
         <div class="contacts__subtitle s-marker">Адрес:</div>
-        <div class="contacts__text">ул. Амураторская, д. 4, каб. 101 (метро Молодежная/Фрунзенская)</div>
+        <div data-aos="zoom-in" data-aos-offset="50" data-aos-delay="200" data-aos-anchor=".hereContacts" class="contacts__text">ул. Амураторская, д. 4, каб. 101 (метро Молодежная/Фрунзенская)</div>
         <div class="contacts__subtitle s-phone">Телефон:</div>
-        <div class="contacts__text">
+        <div data-aos="zoom-in" data-aos-offset="50" data-aos-delay="400" data-aos-anchor=".hereContacts" class="contacts__text">
           <a href="tel:+375298359939">+375 (29) 835 99 39</a>
           <a href="tel:+375445799939">+375 (44) 579 99 39</a>
         </div>
@@ -324,108 +495,6 @@
     <div class="ty-for-review" style="background-color: #C7D7D6;">
       <div class="text">Спасибо за Ваш отзыв!</div>
       <img src="ico/close.svg" style="background-color: #382829; filter: invert(1);">
-    </div>
-    <div class="program-modal" id="program-1">
-      <div class="container">
-        <div class="program-modal__title">Программа</div>
-        <div class="program-modal__title">«Сам себе бровист»</div>
-        <div class="program-modal__duration">Длительность курса: 5 часов</div>
-        <div class="program-modal__text"><span>1</span>Материалы и инструменты – стартовый домашний набор.</div>
-        <div class="program-modal__text"><span>2</span>Дезинфекция инструмента.</div>
-        <div class="program-modal__text"><span>3</span>Колористика. Разбор цветотипа внешности. Подбор красителей и
-          пропорции смешивания
-          “Для себя”.</div>
-        <div class="program-modal__text"><span>4</span>Правильная подготовка бровей. Построение эскиза (паста, нить,
-          карандаш).</div>
-        <div class="program-modal__text"><span>5</span>Моделирование формы пинцетом.</div>
-        <div class="program-modal__text"><span>6</span>Работа с поврежденными бровями.</div>
-        <div class="program-modal__text"><span>7</span>Make-up бровей.</div>
-      </div>
-      <img src="ico/close.svg" class="program-modal__close">
-    </div>
-    <div class="program-modal" id="program-2">
-      <div class="container">
-        <div class="program-modal__title">Программа Standart</div>
-        <div class="program-modal__duration">Длительность курса: 15 часов</div>
-        <div class="program-modal__text"><span>1</span>Инструменты и материалы для работы. Их хранение. Составление
-          стартового набора.</div>
-        <div class="program-modal__text"><span>2</span>Оборудование рабочего места, согласно СанПИНа РБ. Дезинфекция
-          инструмента и рабочего места.</div>
-        <div class="program-modal__text"><span>3</span>Физиогномика – базовые знания для создния индивидуальной формы
-          бровей. Построение эскиза бровей (работа с Brow-пастой, нитью, карандашом). Метод построения эскиза за 5
-          минут.
-        </div>
-        <div class="program-modal__text"><span>4</span>Методы построения мужской, подростковой и женской формы бровей.
-        </div>
-        <div class="program-modal__text"><span>5</span>Стрижка бровей – за либо против?</div>
-        <div class="program-modal__text"><span>6</span>Работа с проблемными бровями (перещипанными, нерастущими с
-          детства
-          и другими сложными ситуациями).</div>
-        <div class="program-modal__text"><span>7</span>Колористика. Разбор топовых полуперманентных красителей СНГ –
-          крем-красок, гель-красок. Разбор формул пропорций смешивания.</div>
-        <div class="program-modal__text"><span>8</span>Пошаговый алгоритм работы.</div>
-        <div class="program-modal__text"><span>9</span>Работа с градиентами. Правила создания плавных градиентов.</div>
-        <div class="program-modal__text"><span>10</span>Полуперманентное окрашивание ресниц. Особенности проведения
-          процедуры.</div>
-        <div class="program-modal__text"><span>11</span>Правила и этика работы с клиентом.</div>
-      </div>
-      <img src="ico/close.svg" class="program-modal__close">
-    </div>
-    <div class="program-modal" id="program-3">
-      <div class="container">
-        <div class="program-modal__title">Программа Standart+</div>
-        <div class="program-modal__duration">Длительность курса: 17 часов</div>
-        <div class="program-modal__text"><span></span>Включает в себя полную программу Standart и еще дополнительно две
-          темы:</div>
-        <div class="program-modal__text"><span>1</span>Осветление бровей.</div>
-        <div class="program-modal__text"><span>2</span>Долговременная укладка бровей (ламинирование). Техника проведения
-          процедуры. Для кого противопоказана.</div>
-      </div>
-      <img src="ico/close.svg" class="program-modal__close">
-    </div>
-    <div class="program-modal" id="program-4">
-      <div class="container">
-        <div class="program-modal__title">Программа Эксклюзив</div>
-        <div class="program-modal__duration">Длительность курса: 19 часов</div>
-        <div class="program-modal__text"><span>1</span>Инструменты и материалы для работы. Их хранение. Составление
-          стартового набора.</div>
-        <div class="program-modal__text"><span>2</span>Оборудование рабочего места, согласно СанПИНа РБ. Дезинфекция
-          инструмента и рабочего места.</div>
-        <div class="program-modal__text"><span>3</span>Физиогномика – базовые знания для создния индивидуальной формы
-          бровей. Построение эскиза бровей (работа с Brow-пастой, нитью, карандашом). Метод построения эскиза за 5
-          минут.
-        </div>
-        <div class="program-modal__text"><span>4</span>Методы построения мужской, подростковой и женской формы бровей.
-        </div>
-        <div class="program-modal__text"><span>5</span>Стрижка бровей – за либо против?</div>
-        <div class="program-modal__text"><span>6</span>Работа с проблемными бровями (перещипанными, нерастущими с
-          детства
-          и другими сложными ситуациями).</div>
-        <div class="program-modal__text"><span>7</span>Осветление бровей.</div>
-        <div class="program-modal__text"><span>8</span>Колористика. Разбор топовых полуперманентных красителей СНГ –
-          крем-красок, гель-красок. Разбор формул пропорций смешивания.</div>
-        <div class="program-modal__text"><span>9</span>Пошаговый алгоритм работы.</div>
-        <div class="program-modal__text"><span>10</span>Работа с градиентами. Правила создания плавных градиентов.</div>
-        <div class="program-modal__text"><span>11</span>Полуперманентное окрашивание ресниц. Особенности проведения
-          процедуры.</div>
-        <div class="program-modal__text"><span>12</span>Долговременная укладка бровей (ламинирование). Техника
-          проведения
-          процедуры. Противопоказания.</div>
-        <div class="program-modal__text"><span>13</span>Горячий воск (плёночный воск). Алгоритм работы. Постановка руки.
-        </div>
-        <div class="program-modal__text"><span>14</span>Правила и этика работы с клиентом.</div>
-      </div>
-      <img src="ico/close.svg" class="program-modal__close">
-    </div>
-    <div class="program-modal" id="program-5">
-      <div class="container">
-        <div class="program-modal__title">Программа для практикующих мастеров</div>
-        <div class="program-modal__duration">Разбор ошибок практикующего мастера.</div>
-        <div class="program-modal__text"><span>1</span>Разбор ошибок и предложение решений.</div>
-        <div class="program-modal__text"><span>2</span>Конкретные советы, как добиться идеальной работы.</div>
-        <div class="program-modal__text"><span>3</span>Отработка на моделях.</div>
-      </div>
-      <img src="ico/close.svg" class="program-modal__close">
     </div>
     <div class="programs-slider">
       <div class="program-modal" id="program-1">
@@ -535,12 +604,41 @@
         <img src="ico/close.svg" class="program-modal__close">
       </div>
     </div>
+    <div class="free-consultation">
+      <img class="free-consultation__close-btn" src="ico/close.svg">
+      <div class="free-consultation__title">Бесплатная консультация</div>
+      <div class="free-consultation__desc">Оставьте свои контактные данные и мы свяжемся с Вами!</div>
+      <form action="#">
+        <div>
+          <input type="text" placeholder="Ваше имя">
+          <img src="ico/person.svg">
+        </div>
+        <div>
+          <input type="text" placeholder="Телефон">
+          <img src="ico/phone.svg">
+        </div>
+        <div>
+          <input type="email" placeholder="E-mail">
+          <img src="ico/mail.svg">
+        </div>
+        <button class="base-btn invert">Отправить</button>
+      </form>
+    </div>
   </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="slick/slick.min.js"></script>
+  <script src="aos/aos.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=6c9f79df-247e-45c2-86fb-6a04085d4ebd&lang=ru_RU"
     type="text/javascript"></script>
   <script src="js/script-training.js"></script>
+
+  <!-- Google Tag Manager (noscript) -->
+
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMLXC9J"
+
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+  <!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>

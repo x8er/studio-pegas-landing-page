@@ -38,6 +38,19 @@ body {
   align-items: center;
 }
 
+.write-effect {
+  opacity: 0;
+  
+  .new {
+    opacity: 0;
+  }
+
+  .div_opacity {
+    transition: opacity .1s ease-in-out;
+    opacity: 1;
+  }
+}
+
 // consultation button
 .base-btn {
   position: relative;
@@ -49,13 +62,16 @@ body {
   font-family: FuturaPT;
   font-size: 14px;
   line-height: 26px;
+  letter-spacing: 0.05em;
   color: black;
+  border-radius: 5px;
   padding: 9px 0;
   text-align: center;
   transition: all .4s ease;
   background-color: transparent;
   z-index: 0;
   outline: none;
+  overflow: hidden;
 
   &:hover {
     color: white;
@@ -114,7 +130,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     box-sizing: border-box;
-    padding: 12px;
+    padding: 12px 5px 12px 12px;
     width: 208px;
     opacity: 0;
     transition: visibility 0s linear 0.2s, opacity 0.2s ease;
@@ -124,6 +140,7 @@ body {
     &__element {
       font-size: 1rem;
       line-height: 1.6rem;
+      letter-spacing: 0.05em;
       transition: all .2s ease;
       color: white;
 
@@ -241,6 +258,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: 40px;
 
       .base-btn {
         box-sizing: border-box;
@@ -311,7 +329,7 @@ header {
   #burgerBtn {
     display: none;
     position: absolute;
-    width: 24px;
+    width: 29px;
     top: 20px;
     right: 20px;
   }
@@ -319,9 +337,9 @@ header {
   .logo_m {
     display: none;
     position: absolute;
-    top: 10px;
+    top: 12px;
     left: 50%;
-    width: 60px;
+    width: 70px;
     transform: translateX(-50%);
   }
 
@@ -343,6 +361,7 @@ header {
       font-family: FuturaPT;
       font-size: 1.14rem;
       font-weight: 300;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: white;
       margin: 15px 14px 0 14px;
@@ -400,6 +419,7 @@ header {
         font-family: FuturaPT;
         font-weight: 450;
         font-size: 4vw;
+        letter-spacing: 0.08em;
         white-space: nowrap;
         text-transform: uppercase;
         padding: 10px 0;
@@ -420,10 +440,11 @@ header {
 
         &__item {
           text-align: center;
+          letter-spacing: 0.05em;
           white-space: nowrap;
           font-family: FuturaPT;
           text-transform: none;
-          font-size: 4vw;
+          font-size: 5.3vw;
           font-weight: 200;
           padding: 2px 0;
         }
@@ -472,6 +493,7 @@ header {
     font-family: FuturaPT;
     font-size: 2.14rem;
     font-weight: 200;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: white;
     box-sizing: border-box;
@@ -524,6 +546,11 @@ header {
       margin: 25px;
       padding: 0 20px;
       border: 1px solid black;
+      transition: margin .2s ease;
+
+      &:hover {
+        margin: 0 25px 25px 25px;
+      }
 
       img {
         margin: 30px 0;
@@ -657,6 +684,7 @@ header {
         padding: 0 10px;
         max-width: 520px;
         min-width: 310px;
+        overflow-x: hidden;
 
         &__title {
           font-weight: 450;
@@ -757,7 +785,7 @@ header {
         .text {
           font-size: 28px;
           letter-spacing: 0.08em;
-          margin-bottom: 14px;
+          margin-bottom: 8px;
           text-transform: uppercase;
         }
 
@@ -766,11 +794,12 @@ header {
           display: flex;
           font-size: 20px;
           letter-spacing: 0.03em;
-          padding: 8px 45px;
-          border: .5px solid white;
+          padding: 8px 35px;
+          border: 1px solid white;
+          border-radius: 5px;
 
           img {
-            margin-right: 5px;
+            margin-right: 12px;
           }
         }
       }
@@ -908,25 +937,23 @@ header {
       }
     }
 
-    &__to-left {
+    &__to-left, &__to-right {
       position: absolute;
       top: 50%;
       left: 25%;
       padding: 20px;
-      transform: translateY(-50%) rotate(90deg);
-    }
-
-    &__to-right {
-      position: absolute;
-      top: 50%;
-      right: 25%;
-      padding: 20px;
-      transform: translateY(-50%) rotate(-90deg);
+      transform: translateY(-50%);
       transition: all .2s ease;
 
       &:hover {
         filter: invert(47%) sepia(0%) saturate(0%) hue-rotate(161deg) brightness(94%) contrast(85%);
       }
+    }
+
+    &__to-right {
+      left: auto;
+      right: 25%;
+      transform: translateY(-50%) rotate(180deg);
     }
 
     &__left-blur {
@@ -1090,7 +1117,7 @@ header {
             display: block;
             border: 1px solid white;
             background-color: transparent;
-            color: #dcdcdc;
+            color: white;
             font-family: FuturaPT;
             font-size: 20px;
             font-weight: 200;
@@ -1167,6 +1194,7 @@ footer {
         justify-content: space-evenly;
         min-width: 425px;
         flex-grow: 1;
+        margin-bottom: 10px;
 
         .block {
           position: relative;
@@ -1197,8 +1225,8 @@ footer {
 
           .base-btn {
             position: absolute;
-            padding: 6px 0;
-            max-width: 128px;
+            padding: 2px 0;
+            max-width: 149px;
             bottom: 20px;
 
             &:hover img {

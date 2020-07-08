@@ -26,7 +26,7 @@ header {
       color: black;
 
       &:hover {
-        color: black;
+        color: #363636;
       }
     }
 
@@ -206,6 +206,7 @@ header {
 }
 
 .programs-container {
+  position: relative;
   display: flex;
   width: 100%;
   font-family: FuturaPT;
@@ -256,21 +257,39 @@ header {
     }
   }
 
-  img {
+  >img {
     object-fit: cover;
     max-width: 50%;
     width: 100%;
+  }
+
+  .desc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
   }
 }
 
 .pics-container {
   display: flex;
   flex-wrap: wrap;
-  img {
-    object-fit: cover;
+
+  div {
+    overflow: hidden;
     max-width: 33.33%;
-    width: 100%;
-    object-fit: cover;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      transition: transform .2s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -328,7 +347,7 @@ header {
         }
 
         &__form {
-          max-width: 100%;
+          max-width: 1428px;
 
           span {
             display: flex;
@@ -348,7 +367,7 @@ header {
 
               input {
                 border-color: black;
-                color: #777777;
+                color: black;
 
                 &::placeholder {
                   color: #777777;
@@ -364,6 +383,7 @@ header {
           .base-btn {
             border-color: black;
             color: white;
+            max-width: 28.93%;
 
             &:hover {
               color: black;
@@ -421,8 +441,6 @@ footer {
 }
 
 .program-modal {
-  max-width: 960px;
-  max-height: 910px;
   width: 100%;
   height: 100%;
   background-color: #ececec;
@@ -486,9 +504,9 @@ footer {
   &__close {
     cursor: pointer;
     position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 11px;
+    top: 30px;
+    right: 30px;
+    width: 24px;
     filter: invert(1);
   }
 }
@@ -528,6 +546,89 @@ footer {
 
     &__text {
       font-size: 3.43vw;
+    }
+  }
+}
+
+.free-consultation {
+  max-width: 614px;
+  max-height: 649px;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  background-color: #ECECEC;
+  position: relative;
+  display: none;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: FuturaPT;
+
+  &__close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 23px;
+    right: 27px;
+    width: 22px;
+    filter: invert(.7);
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: .03em;
+    color: #373737;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  &__desc {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    color: #373737;
+    text-align: center;
+    width: 305px;
+  }
+
+  form {
+    max-width: 405px;
+    width: 100%;
+    margin-top: 70px;
+
+    div {
+      position: relative;
+      margin-bottom: 23px;
+
+      input {
+        width: 100%;
+        font-family: FuturaPT;
+        font-weight: 300;
+        font-size: 17px;
+        color: black;
+        border: 0;
+        background-color: white;
+        box-sizing: border-box;
+        padding: 18px 36px 18px 20px;
+        outline: none;
+        
+        &::placeholder {
+          color: #525252;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        filter: invert(.7);
+      }
+    }
+
+    .base-btn {
+      max-width: none;
     }
   }
 }
@@ -602,11 +703,11 @@ footer {
           rgba(34, 25, 28, 0.94) 17.03%,
           rgba(130, 130, 130, 0) 76.67%
         ),
-        center top/cover url("/img/browmaster-header-bg.jpg") no-repeat;
+        center top/cover url("/img/permakeup-header-bg.jpg") no-repeat;
     }
 
     .pages-title {
-      margin: 80px 5% 0 5%;
+      margin: 60px 5% 0 5%;
       color: white;
     }
   }
@@ -632,19 +733,10 @@ footer {
         &__element {
           position: relative;
           text-align: center;
+          text-decoration: underline;
 
           &::before {
             display: none;
-          }
-
-          &::after {
-            position: absolute;
-            content: '';
-            width: 100%;
-            left: 0;
-            bottom: -3px;
-            height: 2px;
-            background-color: black;
           }
         }
 
@@ -760,6 +852,16 @@ footer {
 
 @media (max-width: 425px) {
   header {
+    &.brow {
+      background: linear-gradient(180deg, #848484 12.85%, #959595 24.16%, rgba(255, 255, 255, 0) 76.23%),
+        bottom/auto 78% url("/img/browmaster-header-bg.jpg") no-repeat;
+    }
+
+    &.permakeup {
+      background: linear-gradient(180deg, #848484 12.85%, #959595 24.16%, rgba(255, 255, 255, 0) 76.23%),
+        80% bottom/auto 78% url("/img/permakeup-header-bg.jpg") no-repeat;
+    }
+
     .pages-title {
       &__name {
         font-size: 5.62vw;
@@ -771,10 +873,10 @@ footer {
       }
 
       .base-btn {
-        margin-top: 30px;
-        max-width: 58.75vw;
-        padding: 0.93vw 0;
-        font-size: 2.5vw;
+        margin-top: 20px;
+        max-width: none;
+        padding: 0.7vw 0;
+        font-size: 3.75vw;
       }
     }
   }
@@ -794,7 +896,7 @@ footer {
         &__title {
           text-align: left;
           font-size: 4.06vw;
-          margin-left: 4.68vw;
+          margin-left: 2.68vw;
           margin-top: 0;
           margin-bottom: 5px;
         }
@@ -899,7 +1001,7 @@ footer {
       .column {
         .feedback {
           &__form {
-            max-width: 192px;
+            max-width: 275px;
 
             span {
               width: auto;

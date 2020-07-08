@@ -157,3 +157,27 @@ ymaps.ready(function() {
 
   map.geoObjects.add(myPlacemark);
 });
+
+AOS.init({
+  duration: 400,
+  offset: 300,
+  once: true
+});
+
+$(document).ready(function () {
+  $.fn.animate_Text = function () {
+    var string = this.text();
+    return this.each(function () {
+      var $this = $(this);
+      $this.html(string.replace(/./g, '<span class="new">$&</span>'));
+      $this.find('span.new').each(function(i, el){
+        setTimeout(function (){ $(el).addClass('div_opacity'); }, 40 * i);
+      });
+    });
+  };
+  
+  setTimeout(function () {
+    $('.write-effect').css('opacity', 1);
+    $('.write-effect').animate_Text();
+  }, 1300)
+});

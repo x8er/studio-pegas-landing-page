@@ -71,18 +71,18 @@ $('.blackout').on('click', function (e) {
     $('body').css('overflow', 'visible');
     $('.make-review').css('display', 'none');
     $('.blackout').css('display', 'none');
-    $('#program-1').css('display', 'none');
-    $('#program-2').css('display', 'none');
-    $('#program-3').css('display', 'none');
-    $('#program-4').css('display', 'none');
-    $('#program-5').css('display', 'none');
-    $('#perMakeupProgram-1').css('display', 'none');
-    $('#perMakeupProgram-2').css('display', 'none');
+    $('.free-consultation').css('display', 'none');
   }
 });
 // same like a click on .blackout
 $('.program-modal__close').on('click', function () {
-  $('.blackout').click();
+  $('#program-1').css('display', 'none');
+  $('#program-2').css('display', 'none');
+  $('#program-3').css('display', 'none');
+  $('#program-4').css('display', 'none');
+  $('#program-5').css('display', 'none');
+  $('#perMakeupProgram-1').css('display', 'none');
+  $('#perMakeupProgram-2').css('display', 'none');
   $('.programs-slider').css('display', 'none');
 });
 // close make-review modal
@@ -101,8 +101,11 @@ $('#showReviewModal').on('click', function () {
 // openProgram-1-5
 for (let i = 1; i < 6; i++) {
   $(`#openProgram-${i}`).on('click', function () {
-    $('body').css('overflow', 'hidden');
-    $('.blackout').css('display', 'flex');
+    $('#program-1').css('display', 'none');
+    $('#program-2').css('display', 'none');
+    $('#program-3').css('display', 'none');
+    $('#program-4').css('display', 'none');
+    $('#program-5').css('display', 'none');
     $(`#program-${i}`).css('display', 'flex');
   });
 }
@@ -119,8 +122,8 @@ for (let i = 1; i < 6; i++) {
 // perMakeupOpenProgram-1-2
 for (let i = 1; i < 3; i++) {
   $(`#perMakeupOpenProgram-${i}`).on('click', function () {
-    $('body').css('overflow', 'hidden');
-    $('.blackout').css('display', 'flex');
+    $('#perMakeupProgram-1').css('display', 'none');
+    $('#perMakeupProgram-2').css('display', 'none');
     $(`#perMakeupProgram-${i}`).css('display', 'flex');
   });
 }
@@ -133,6 +136,16 @@ for (let i = 1; i < 3; i++) {
     $(`.programs-slider`).slick('slickGoTo', i-1, true);
   });
 }
+// open free-consultation form
+$('#showFreeConsultation').on('click', function () {
+  $('body').css('overflow', 'hidden');
+  $('.blackout').css('display', 'flex');
+  $('.free-consultation').css('display', 'flex');
+});
+// close free-consultation form
+$('.free-consultation__close-btn').on('click', function () {
+  $('.blackout').click();
+});
 
 ymaps.ready(function() {
   var map = new ymaps.Map("map", {
@@ -143,4 +156,28 @@ ymaps.ready(function() {
   var myPlacemark = new ymaps.Placemark([53.910543, 27.529698]);
 
   map.geoObjects.add(myPlacemark);
+});
+
+AOS.init({
+  duration: 400,
+  offset: 200,
+  once: true
+});
+
+$(document).ready(function () {
+  $.fn.animate_Text = function () {
+    var string = this.text();
+    return this.each(function () {
+      var $this = $(this);
+      $this.html(string.replace(/./g, '<span class="new">$&</span>'));
+      $this.find('span.new').each(function(i, el){
+        setTimeout(function (){ $(el).addClass('div_opacity'); }, 40 * i);
+      });
+    });
+  };
+  
+  setTimeout(function () {
+    $('.write-effect').css('opacity', 1);
+    $('.write-effect').animate_Text();
+  }, 1300)
 });
